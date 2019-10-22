@@ -1,7 +1,7 @@
 export default [
   {
     path: "/about",
-    component: () => import(/* webpackChunkName: "page--src--pages--about-vue" */ "/Users/lincolixavier/Documents/Projetos/lincolixavier/lincolixavier-portfolio/src/pages/About.vue"),
+    component: () => import(/* webpackChunkName: "page--src--pages--about-vue" */ "/Users/lincolixavier/Documents/Projetos/lincolixavier/lincolixavier.com/src/pages/About.vue"),
     meta: {
       data: true
     }
@@ -9,7 +9,7 @@ export default [
   {
     name: "home",
     path: "/",
-    component: () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/lincolixavier/Documents/Projetos/lincolixavier/lincolixavier-portfolio/src/pages/Index.vue"),
+    component: () => import(/* webpackChunkName: "page--src--pages--index-vue" */ "/Users/lincolixavier/Documents/Projetos/lincolixavier/lincolixavier.com/src/pages/Index.vue"),
     meta: {
       data: true
     }
@@ -17,7 +17,7 @@ export default [
   {
     name: "404",
     path: "/404",
-    component: () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/Users/lincolixavier/Documents/Projetos/lincolixavier/lincolixavier-portfolio/node_modules/gridsome/app/pages/404.vue"),
+    component: () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/Users/lincolixavier/Documents/Projetos/lincolixavier/lincolixavier.com/node_modules/gridsome/app/pages/404.vue"),
     meta: {
       data: true
     }
@@ -25,7 +25,7 @@ export default [
   {
     name: "*",
     path: "*",
-    component: () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/Users/lincolixavier/Documents/Projetos/lincolixavier/lincolixavier-portfolio/node_modules/gridsome/app/pages/404.vue"),
+    component: () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/Users/lincolixavier/Documents/Projetos/lincolixavier/lincolixavier.com/node_modules/gridsome/app/pages/404.vue"),
     meta: {
       data: true
     }

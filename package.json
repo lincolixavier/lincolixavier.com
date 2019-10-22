@@ -1,5 +1,5 @@
 {
-  "name": "lincolixavier-portfolio",
+  "name": "lincolixavier-website",
   "private": true,
   "scripts": {
     "build": "gridsome build",

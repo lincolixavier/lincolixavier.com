@@ -1,7 +1,7 @@
 export default {
   "siteUrl": "",
-  "siteName": "Gridsome",
-  "titleTemplate": "%s - Gridsome",
+  "siteName": "Lincoli Xavier",
+  "titleTemplate": "%s - Lincoli Xavier",
   "siteDescription": "",
   "version": "0.6.3"
 }
