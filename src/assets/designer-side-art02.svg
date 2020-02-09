@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="81" height="81" viewBox="0 0 81 81">
+  <g id="light" transform="translate(-11 -11)">
+    <g id="Grupo_107" data-name="Grupo 107" transform="translate(11 11)">
+      <path id="Caminho_198" data-name="Caminho 198" d="M141.248,92.3a22.608,22.608,0,0,0-22.531,18.961,21.893,21.893,0,0,0,5.637,17.754,22.464,22.464,0,0,1,5.984,15.34l-.017,8.96a6.615,6.615,0,0,0,6.695,6.546h8.629a6.615,6.615,0,0,0,6.695-6.546l.017-8.96a21.166,21.166,0,0,1,5.637-14.993,21.3,21.3,0,0,0,6.166-14.993C164.143,102.119,153.745,92.3,141.248,92.3Zm7.736,61.014a3.129,3.129,0,0,1-3.174,3.108h-8.629a3.119,3.119,0,0,1-3.174-3.108v-3.967h14.96v3.967Zm6.546-26.366a24.519,24.519,0,0,0-6.695,17.407v1.554h-14.96v-1.554a26.509,26.509,0,0,0-7.042-17.572,18.192,18.192,0,0,1-4.761-14.993,19.431,19.431,0,0,1,19.192-16.035c10.745,0,19.374,8.447,19.374,18.613A18.013,18.013,0,0,1,155.531,126.948Z" transform="translate(-100.748 -78.861)" fill="#ffec83"/>
+      <rect id="Retângulo_46" data-name="Retângulo 46" width="3.521" height="8.265" transform="translate(38.731)" fill="#ffec83"/>
+      <path id="Caminho_199" data-name="Caminho 199" d="M385.1,78.1l2.463,2.463,6.034-5.8-2.48-2.463Z" transform="translate(-323.259 -62.167)" fill="#ffec83"/>
+      <rect id="Retângulo_47" data-name="Retângulo 47" width="8.629" height="3.455" transform="translate(72.371 37.227)" fill="#ffec83"/>
+      <rect id="Retângulo_48" data-name="Retângulo 48" width="8.629" height="3.455" transform="translate(0 37.227)" fill="#ffec83"/>
+      <path id="Caminho_200" data-name="Caminho 200" d="M77.58,72.2,75.1,74.663l6.034,5.8L83.6,78Z" transform="translate(-64.504 -62.083)" fill="#ffec83"/>
+    </g>
+  </g>
+</svg>
