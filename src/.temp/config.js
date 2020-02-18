@@ -3,5 +3,5 @@ export default {
   "siteName": "Lincoli Xavier",
   "titleTemplate": "%s - Lincoli Xavier",
   "siteDescription": "Meu humilde portifólio na internet",
-  "version": "0.6.3"
+  "version": "0.6.9"
 }
