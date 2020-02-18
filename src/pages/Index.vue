@@ -1,11 +1,11 @@
 <template>
   <div class="container">
-
-    <Header></Header>
+    <Header :isHome="true" ></Header>
     <div @mousemove="mouseEnter"  @mouseleave="mouseLeave"  class="skillset-presentation">
       <div class="skillset-art">        
         <div class="skillset-side skillset-code-side">
           <img src="../assets/codeart.png">
+          <input class="text-code"  value="<logic /> 👨🏻‍💻" type="text" disabled>
         </div>
 
         <div class="laptop laptop-coder"></div>
@@ -14,22 +14,15 @@
         </div>
 
         <div class="skillset-side skillset-design-side">
-        <!-- style="`transform: translateX(${currentX});`" -->
           <img src="../assets/designerart.png" alt="">
+          <h1 class="text-art">art 👨🏻‍🎨</h1> 
         </div>
       </div>
     </div>
-
     <div class="button-toportfolio">
-      <a href="" class="arrow">
-        Veja meu trabalho
-      </a>
+      <g-link  class="arrow" to="/work-and-play/">Veja meu trabalho</g-link>
     </div>
-
-
   </div>
-
-
 </template>
 
 <script>
@@ -42,11 +35,14 @@ export default {
       designX:'',
       boxRight: '',
       hover: false,
-      currentX: 0,
+      transition: false,
       relMouseX: 640,
       xp: 640,
 
     };
+  },
+  mounted(){
+    // this.canvas();
   },
   methods:{
     mouseLeave(){
@@ -54,14 +50,12 @@ export default {
       let laptopDesigner = document.querySelector('.laptop-designer');
       let artCode = document.querySelector('.skillset-code-side');
       let artDesign = document.querySelector('.skillset-design-side');
-      this.designX = 'SIM';
       artCode.className = 'skillset-side skillset-code-side';
       artDesign.className = 'skillset-side skillset-design-side';
       laptopDesigner.className = 'laptop laptop-designer';
       laptopCoder.className = 'laptop laptop-coder';
     },
     mouseEnter(event){
-      this.designX = 'NAO';
       let mouseX = event.clientX;
       let laptopCoder = document.querySelector('.laptop-coder');
       let laptopDesigner = document.querySelector('.laptop-designer');
@@ -80,10 +74,9 @@ export default {
 
         artCode.classList.remove('close');
         artCode.classList.add('open');
-
+        
         artDesign.classList.remove('open');
         artDesign.classList.add('close');
-
 
       } else if(mouseX > this.currentX && this.currentX > sizeWidthHalf ) {
         laptopDesigner.classList.add('open');
@@ -96,22 +89,18 @@ export default {
 
         artDesign.classList.remove('close');
         artDesign.classList.add('open');
-
-
-
       }
       this.currentX = mouseX;
-    }
+    },
   }
 }
+
 
 
 </script>
 
 <style lang="scss">
-*{
-  font-family: 'Quicksand', sans-serif;
-}
+
 .skillset-presentation{
   display: flex;
   flex-wrap: wrap;
@@ -131,6 +120,7 @@ export default {
   z-index: 9;
   position: absolute;
   transition: all 1s ease-in-out;
+  opacity: 0.4;
   &.open{
     left: -32px;
     opacity: 1;
@@ -139,12 +129,23 @@ export default {
     left: -62px;
     opacity: 0;
   }
+  .text-code{
+    font-size: 40px;
+    color: #2b2b2b;
+    position: absolute;
+    top: 50%;
+    background: transparent;
+    left: -78%;
+    border: none;
+    width: 227px;
+  }
 
 }
 .skillset-design-side{
   right: -67px;
   position: absolute;
   transition: all 0.9s ease-in-out;
+  opacity: 0.4;
   &.open{
     right: -32px;
     opacity: 1;
@@ -152,6 +153,14 @@ export default {
   &.close{
     right: -62px;
     opacity: 0;
+  }
+  .text-art{
+    font-size: 40px;
+    color: #FF5858;
+    position: absolute;
+    top: 50%;
+    right: -67%;
+    width: 119px;
   }
 }
 .laptop{

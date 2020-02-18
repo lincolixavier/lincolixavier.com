@@ -15,6 +15,13 @@ export default [
     }
   },
   {
+    path: "/work-and-play",
+    component: () => import(/* webpackChunkName: "page--src--pages--work-and-play-vue" */ "/Users/lincolixavier/Documents/Projetos/lincolixavier/lincolixavier.com/src/pages/WorkAndPlay.vue"),
+    meta: {
+      data: true
+    }
+  },
+  {
     name: "404",
     path: "/404",
     component: () => import(/* webpackChunkName: "page--node-modules--gridsome--app--pages--404-vue" */ "/Users/lincolixavier/Documents/Projetos/lincolixavier/lincolixavier.com/node_modules/gridsome/app/pages/404.vue"),

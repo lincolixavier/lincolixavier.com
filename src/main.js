@@ -1,5 +1,5 @@
 // This is the main.js file. Import global CSS and scripts here.
-
+import '~/assets/main.scss'
 import Header from '~/layouts/Header.vue'
 import Logo from '~/components/Logo.vue'
 

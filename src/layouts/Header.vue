@@ -1,13 +1,13 @@
 <template>
-    <header class="header">
+    <header class="header" :class="{ 'is-home' : isHome !== true }">
       <div @click="toggleMenu" class="header-menu"></div>
       <Menu :show="showMenu" style="position:absolute;"  :closeMenu="this.toggleMenu" />
       <div class="header-logo">
         <Logo />
       </div>
-      <div class="header-mailme">
+      <a href="mailto:hello@lincolixavier.com" class="header-mailme">
         <img src="../assets/mail.svg" alt="Email Me">
-      </div>
+      </a>
     </header>
 </template>
 
@@ -18,6 +18,9 @@ export default {
   name: 'Header',
   components: {
     Menu,
+  },
+  props:{
+    isHome: false,
   },
   data(){
     return{
@@ -71,6 +74,15 @@ query {
   }
   .header-mailme{
     margin-top: 10px;
+  }
+}
+.is-home{
+  .header-logo{
+    width: 263px;
+    margin-top: -31px;
+    svg{
+      width: 100%;
+    }
   }
 }
 

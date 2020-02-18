@@ -4,27 +4,27 @@
 
       </div>
       <nav class="nav-menu">
-        <div class="link">
-          <a class="active" href="">home</a>
+        <div @click="closeMenu" class="link">
+          <g-link @click="closeMenu"  to="/">home</g-link>
         </div>
-        <div class="link">
-          <a href="">work & play </a>
+        <div @click="closeMenu" class="link">
+          <g-link @click="closeMenu" to="/work-and-play/">work & play </g-link>
         </div>
-        <div class="link">
-          <a href="">sobre</a>
+        <div @click="closeMenu" class="link">
+          <g-link @click="closeMenu"  to="/about/">sobre</g-link>
         </div>
         <div class="link">
           <a href="">blog</a>
         </div>
       </nav>
       <div class="contact">
-        <a href="" class="contact-icon is-github"></a>
-        <a href="" class="contact-icon is-twitter"></a>
-        <a href="" class="contact-icon is-linkedin"></a>
-        <a href="" class="contact-icon is-instagram"></a>
-        <a href="" class="contact-icon is-dribbble"></a>
-        <a href="" class="contact-icon is-shutterstock"></a>
-        <a href="" class="contact-icon is-whatsapp"></a>
+        <a target="_blank" href="https://github.com/lincolixavier" class="contact-icon is-github"></a>
+        <a target="_blank" href="https://twitter.com/lincolixavier" class="contact-icon is-twitter"></a>
+        <a target="_blank" href="https://www.linkedin.com/in/lincoli-xavier/" class="contact-icon is-linkedin"></a>
+        <a target="_blank" href="https://www.instagram.com/lincolimonteiro/" class="contact-icon is-instagram"></a>
+        <a target="_blank" href="https://dribbble.com/lincolixavier" class="contact-icon is-dribbble"></a>
+        <a target="_blank" href="https://www.shutterstock.com/g/lincolimonteiro" class="contact-icon is-shutterstock"></a>
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=5571982706092&text=Oi!%20Posso%20te%20ajudar%20com%20seu%20projeto%20digital!%20%3DD%20Vamos%20conversar!" class="contact-icon is-whatsapp"></a>
       </div>
     </div>
 </template>
@@ -79,6 +79,7 @@ export default {
     position: absolute;
     left: 37px;
     top: 39px;
+    cursor: pointer;
     &:after, &:before{
       content: '';
       position: absolute;
@@ -100,6 +101,7 @@ export default {
   align-content: space-between;
   .link{
     width: 100%;
+    cursor: pointer;
   }
   a{
     font-size: 76px;
