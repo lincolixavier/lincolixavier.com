@@ -7,8 +7,13 @@ import Logo from '~/components/Logo.vue'
 export default function (Vue, { router, head, isClient }) {
 
   head.link.push({
-      rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&display=swap'
+      rel: 'preload',
+      href: 'https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&display=swap',
+      as: 'style'
+  })
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&display=swap'
   })
   // Set default layout as a global component
   Vue.component('Header', Header);

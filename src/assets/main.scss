@@ -15,7 +15,42 @@ html{
   margin: 0;
   padding: 0;
 }
+.title-page{
+  font-size: 76px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto 46px;
+  &:after{
+    content: '';
+    width: 30px;
+    height: 6px;
+    position: absolute;
+    bottom: 18px;
+    animation: text-title 1.4s .2s infinite ease-in-out;
+  }
+}
 
-@media screen and (max-width:1280px){
-  
+@keyframes text-title {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 950px){
+  .title-page {
+    font-size: 36px !important;
+    margin: 0 auto 22px !important;
+    &:after {
+      width: 18px;
+      height: 2px;
+      bottom: 10px;
+    } 
+  }
 }

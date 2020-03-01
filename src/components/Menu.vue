@@ -14,7 +14,7 @@
           <g-link @click="closeMenu"  to="/about/">sobre</g-link>
         </div>
         <div class="link">
-          <a href="">blog</a>
+          <a target="_blank" href="https://dev.to/lincolixavier">blog</a>
         </div>
       </nav>
       <div class="contact">

@@ -98,7 +98,7 @@ query {
 
 @media screen and (max-width: 450px){
   .header {
-    padding: 32px 10px 0px 10px;
+    padding: 32px 15px 0px 15px;
     .header-menu {
       width: 32px;
       height: 18px;
@@ -107,8 +107,11 @@ query {
       }
     }
   }
-  .header-logo svg{
-    width: 150px;
+  .is-home .header-logo{
+    text-align: center;
+  }
+  .header-logo svg,.is-home .header-logo svg{
+    width: 190px;
   }
 
 

@@ -3,7 +3,7 @@
     
     <Header :isHome="false" ></Header>
     <div class="container-page">
-      <div class="title-page">
+      <div class="title-page title-about">
       sobre mim
     </div>
     <section class="about-me">
@@ -110,21 +110,10 @@ export default {
   width: 93%;
   margin: auto;
 }
-.title-page{
-  font-size: 76px;
+.title-about{
   color: #7488ec;
-  position: relative;
-  text-align: center;
-  width: fit-content;
-  margin: 0 auto 46px;
   &:after{
-    content: '';
-    width: 30px;
-    height: 6px;
-    position: absolute;
-    bottom: 18px;
     background: #7488ec;
-    animation: id 1.4s .2s infinite ease-in-out;
   }
 }
 
@@ -191,17 +180,6 @@ export default {
   }
 }
 
-@keyframes id {
-  0%{
-    opacity: 0;
-  }
-  50%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
-}
 .contact-me{
   margin-bottom: 70px;
 }
@@ -282,6 +260,63 @@ export default {
         background: #20cf46;
       }
     } 
+  }
+}
+
+@media screen and (max-width: 950px){
+  .about-me {
+    flex-wrap: wrap;
+    justify-content: center;
+    img{
+      width: 166px;
+      margin-bottom: 17px;
+    }
+    .description{
+      margin-left: 0;
+      width: 100%;
+      p {
+        font-size: 17px;
+        line-height: 24px;
+      }
+   }
+  }
+  .title-section {
+    font-size: 23px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .skills-set{
+    width: 100%;
+    text-align: center;
+    margin: 3px 20px 21px 18px;
+    h3{
+      font-size: 17px;
+      &:after{
+        width: 29px;
+        margin: auto;
+        right: 0;
+        left: 0;
+      }
+    }
+    ul{
+      margin:0;
+    }
+    li{
+      font-size: 18px;
+      margin: auto;
+      width: fit-content;
+    }
+  }
+}
+
+@media screen and (max-width: 650px){
+  .contact-socialmedia {
+    padding: 0px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    a{
+      transform: scale(0.7);
+    }
   }
 }
 

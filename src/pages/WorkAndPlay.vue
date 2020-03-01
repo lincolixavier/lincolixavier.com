@@ -3,25 +3,26 @@
     
     <Header :isHome="false" ></Header>
     <div class="container-page">
-      <div class="title-page">
+      <div class="title-page title-work">
       work & play
     </div>
 
     <section class="section-workplay">
-      <article class="project red-tag">
-        <h1 class="project-title">DESENBAHIA</h1>
+      <article class="project purple-tag">
+        <h1 class="project-title">VENTURI X</h1>
         <p class="project-description">
-          Web Portal da Agência de Fomento da Bahia 
+            Site Institucional da Venturi X Soluções em TI feito com GatsbyJS
         </p>
         <ul class="tags">
           <li class="tag front">FrontEnd</li>
-          <li class="tag js">Javascript</li>
           <li class="tag html">HTML5</li>
           <li class="tag css">CSS3</li>
-          <li class="tag jquery">Jquery</li>
+          <li class="tag git">Git</li>
           <li class="tag rwd">RWD</li>
+          <li class="tag js">Javascript</li>
+          <li class="tag css">GatsbyJS</li>
         </ul>
-        <a href="" class="project-link">
+        <a target="_blank" href="https://vntrx.com/" class="project-link">
           <svg id="foreign" width="25" height="25" viewBox="0 0 25 25">
             <g id="Grupo_143" data-name="Grupo 143" transform="translate(9.091)">
               <g id="Grupo_142" data-name="Grupo 142">
@@ -37,22 +38,21 @@
           Veja o projeto
         </a>
       </article>
-      <article class="project green-tag">
-        <h1 class="project-title">Defensoria Pública</h1>
+      <article class="project orange-tag">
+        <h1 class="project-title">Senac Bahia</h1>
         <p class="project-description">
-          Web Portal da Defensoria Pública da Bahia  
+           Desenvolvimento Frontend do Web Portal Senac Bahia
         </p>
         <ul class="tags">
           <li class="tag front">FrontEnd</li>
-          <li class="tag back">Backend</li>
-          <li class="tag js">Javascript</li>
-          <li class="tag wordpress">Wordpress</li>
           <li class="tag html">HTML5</li>
           <li class="tag css">CSS3</li>
-          <li class="tag jquery">Jquery</li>
+          <li class="tag git">Git</li>
           <li class="tag rwd">RWD</li>
+          <li class="tag jquery">Jquery</li>
+          <li class="tag js">Javascript</li>
         </ul>
-        <a href="" class="project-link">
+        <a target="_blank" href="https://www.ba.senac.br/" class="project-link">
           <svg id="foreign" width="25" height="25" viewBox="0 0 25 25">
             <g id="Grupo_143" data-name="Grupo 143" transform="translate(9.091)">
               <g id="Grupo_142" data-name="Grupo 142">
@@ -83,7 +83,7 @@
           <li class="tag git">Github</li>
 
         </ul>
-        <a href="" class="project-link">
+        <a target="_blank" href="https://github.com/lincolixavier/css-badges-kanto" class="project-link">
           <svg id="foreign" width="25" height="25" viewBox="0 0 25 25">
             <g id="Grupo_143" data-name="Grupo 143" transform="translate(9.091)">
               <g id="Grupo_142" data-name="Grupo 142">
@@ -99,6 +99,67 @@
           Veja o projeto
         </a>
       </article>
+      <article class="project red-tag">
+        <h1 class="project-title">DESENBAHIA</h1>
+        <p class="project-description">
+           Desenvolvimento Frontend do Web Portal da Agência de Fomento da Bahia 
+        </p>
+        <ul class="tags">
+          <li class="tag front">FrontEnd</li>
+          <li class="tag js">Javascript</li>
+          <li class="tag html">HTML5</li>
+          <li class="tag css">CSS3</li>
+          <li class="tag jquery">Jquery</li>
+          <li class="tag rwd">RWD</li>
+        </ul>
+        <a target="_blank" href="http://www.desenbahia.ba.gov.br/" class="project-link">
+          <svg id="foreign" width="25" height="25" viewBox="0 0 25 25">
+            <g id="Grupo_143" data-name="Grupo 143" transform="translate(9.091)">
+              <g id="Grupo_142" data-name="Grupo 142">
+                <path id="Caminho_218" data-name="Caminho 218" d="M200.955,0h-9.091a1.136,1.136,0,0,0,0,2.273h6.348l-11.7,11.7a1.136,1.136,0,1,0,1.607,1.607l11.7-11.7v6.347a1.136,1.136,0,0,0,2.273,0V1.136A1.136,1.136,0,0,0,200.955,0Z" transform="translate(-186.182)"/>
+              </g>
+            </g>
+            <g id="Grupo_145" data-name="Grupo 145" transform="translate(0 4.545)">
+              <g id="Grupo_144" data-name="Grupo 144">
+                <path id="Caminho_219" data-name="Caminho 219" d="M19.318,99.909a1.136,1.136,0,0,0-1.136,1.136v10.227H2.273V95.364H12.5a1.136,1.136,0,1,0,0-2.273H1.136A1.136,1.136,0,0,0,0,94.227v18.182a1.136,1.136,0,0,0,1.136,1.136H19.318a1.136,1.136,0,0,0,1.136-1.136V101.046A1.136,1.136,0,0,0,19.318,99.909Z" transform="translate(0 -93.091)"/>
+              </g>
+            </g>
+          </svg>
+          Veja o projeto
+        </a>
+      </article>
+      <article class="project green-tag">
+        <h1 class="project-title">Defensoria Pública</h1>
+        <p class="project-description">
+           Desenvolvimento Frontend & Backend do Web Portal da Defensoria Pública da Bahia  
+        </p>
+        <ul class="tags">
+          <li class="tag front">FrontEnd</li>
+          <li class="tag back">Backend</li>
+          <li class="tag js">Javascript</li>
+          <li class="tag wordpress">Wordpress</li>
+          <li class="tag html">HTML5</li>
+          <li class="tag css">CSS3</li>
+          <li class="tag jquery">Jquery</li>
+          <li class="tag rwd">RWD</li>
+        </ul>
+        <a target="_blank" href="http://www.defensoria.ba.def.br/"  class="project-link">
+          <svg id="foreign" width="25" height="25" viewBox="0 0 25 25">
+            <g id="Grupo_143" data-name="Grupo 143" transform="translate(9.091)">
+              <g id="Grupo_142" data-name="Grupo 142">
+                <path id="Caminho_218" data-name="Caminho 218" d="M200.955,0h-9.091a1.136,1.136,0,0,0,0,2.273h6.348l-11.7,11.7a1.136,1.136,0,1,0,1.607,1.607l11.7-11.7v6.347a1.136,1.136,0,0,0,2.273,0V1.136A1.136,1.136,0,0,0,200.955,0Z" transform="translate(-186.182)"/>
+              </g>
+            </g>
+            <g id="Grupo_145" data-name="Grupo 145" transform="translate(0 4.545)">
+              <g id="Grupo_144" data-name="Grupo 144">
+                <path id="Caminho_219" data-name="Caminho 219" d="M19.318,99.909a1.136,1.136,0,0,0-1.136,1.136v10.227H2.273V95.364H12.5a1.136,1.136,0,1,0,0-2.273H1.136A1.136,1.136,0,0,0,0,94.227v18.182a1.136,1.136,0,0,0,1.136,1.136H19.318a1.136,1.136,0,0,0,1.136-1.136V101.046A1.136,1.136,0,0,0,19.318,99.909Z" transform="translate(0 -93.091)"/>
+              </g>
+            </g>
+          </svg>
+          Veja o projeto
+        </a>
+      </article>
+      
     </section>
 
 
@@ -133,21 +194,10 @@ export default {
   width: 93%;
   margin: auto;
 }
-.title-page{
-  font-size: 76px;
+.title-work{
   color: #61CC33;
-  position: relative;
-  text-align: center;
-  width: fit-content;
-  margin: 0 auto 46px;
   &:after{
-    content: '';
-    width: 30px;
-    height: 6px;
-    position: absolute;
-    bottom: 18px;
     background: #61CC33;
-    animation: id 1.4s .2s infinite ease-in-out;
   }
 }
 
@@ -170,6 +220,7 @@ export default {
     &:after{
       content: '';
       position: absolute;
+      z-index: -1;
       top: 0;
       right: 0;
       width: 100%;
@@ -313,10 +364,35 @@ export default {
     }
   }
 }
+.purple-tag{
+  &:after{
+    border-color:#764cde;  
+  }
+  .project-title{
+    color:#764cde;
+  }
+  .project-link{
+    color:#764cde;  
+    svg{
+      fill:#764cde;
+    }
+  }
+}
 
-
-
-
+.orange-tag{
+  &:after{
+    border-color:#f5a841;  
+  }
+  .project-title{
+    color:#f5a841;
+  }
+  .project-link{
+    color:#f5a841;  
+    svg{
+      fill:#f5a841;
+    }
+  }
+}
 
 .contact-me{
   margin-bottom: 70px;
@@ -401,16 +477,29 @@ export default {
   }
 }
 
-@keyframes id {
-  0%{
-    opacity: 0;
+@media screen and (max-width: 700px){
+ .section-workplay .project {
+    width: 100%;
+    padding: 13px;
+    margin: 11px;
+  } 
+  .container-page {
+    overflow: hidden;
   }
-  50%{
-    opacity: 1;
+  .title-section {
+    font-size: 21px;
+    text-align: center;
+    margin: 30px 0 0;
   }
-  100%{
-    opacity: 0;
+  .contact-socialmedia {
+    padding: 0px 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    a{
+      transform: scale(0.7);
+    }
   }
 }
+
 
 </style>
