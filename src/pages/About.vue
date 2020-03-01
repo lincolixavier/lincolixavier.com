@@ -34,7 +34,6 @@
           <li>Photoshop</li>
           <li>Illustrator</li>
           <li>Adobe XD</li>
-         <li>Adobe XD</li>
 
         </ul>
       </div>

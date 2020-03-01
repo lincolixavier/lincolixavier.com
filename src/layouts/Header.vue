@@ -2,9 +2,9 @@
     <header class="header" :class="{ 'is-home' : isHome !== true }">
       <div @click="toggleMenu" class="header-menu"></div>
       <Menu :show="showMenu" style="position:fixed;"  :closeMenu="this.toggleMenu" />
-      <div class="header-logo">
-        <Logo />
-      </div>
+      <g-link @click="closeMenu" class="header-logo"  to="/">
+       <Logo />
+      </g-link>
       <a href="mailto:hello@lincolixavier.com" class="header-mailme">
         <img src="../assets/mail.svg" alt="Email Me">
       </a>

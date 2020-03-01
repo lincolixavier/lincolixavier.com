@@ -11,6 +11,10 @@ export default function (Vue, { router, head, isClient }) {
       href: 'https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&display=swap',
       as: 'style'
   })
+  head.meta.push({
+    name: 'theme-color',
+    content: '#ff5858a6'
+  })
   head.link.push({
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700&display=swap'
