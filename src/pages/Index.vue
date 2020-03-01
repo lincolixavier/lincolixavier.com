@@ -37,11 +37,11 @@
 
 <script>
 import Vue from 'vue';
-import PrismicVue from 'prismic-vue';
+// import PrismicVue from 'prismic-vue';
 
-Vue.use(PrismicVue, {
-  endpoint: 'https://lincoli-xavier.cdn.prismic.io/api/v2',
-})
+// Vue.use(PrismicVue, {
+//   endpoint: 'https://lincoli-xavier.cdn.prismic.io/api/v2',
+// })
 
 export default {
   metaInfo: {
@@ -59,26 +59,26 @@ export default {
 
     };
   },
-  beforeCreate () {
-    // GET POSTS
-    this.$prismic.client.query(
-      this.$prismic.Predicates.at('document.id', 'Xkw6-xEAACMAcjYD'),
-      // { orderings : '[my.blog_post.date desc]' }
-    ).then((response) => {
-      // response is the response object, response.results holds the documents
-      console.log(response);
-       this.documents = response.results;
-    });
-    // POST UNIQUE
-    this.$prismic.client.query(
-      this.$prismic.Predicates.at('document.id', 'Xkw6-xEAACMAcjYD'),
-      // { orderings : '[my.blog_post.date desc]' }
-    ).then((response) => {
-      // response is the response object, response.results holds the documents
-      console.log(response);
-       this.documents = response.results;
-    });
-  },
+  // beforeCreate () {
+  //   // GET POSTS
+  //   this.$prismic.client.query(
+  //     this.$prismic.Predicates.at('document.id', 'Xkw6-xEAACMAcjYD'),
+  //     // { orderings : '[my.blog_post.date desc]' }
+  //   ).then((response) => {
+  //     // response is the response object, response.results holds the documents
+  //     console.log(response);
+  //      this.documents = response.results;
+  //   });
+  //   // POST UNIQUE
+  //   this.$prismic.client.query(
+  //     this.$prismic.Predicates.at('document.id', 'Xkw6-xEAACMAcjYD'),
+  //     // { orderings : '[my.blog_post.date desc]' }
+  //   ).then((response) => {
+  //     // response is the response object, response.results holds the documents
+  //     console.log(response);
+  //      this.documents = response.results;
+  //   });
+  // },
   methods:{
     mouseLeave(){
       let laptopCoder = document.querySelector('.laptop-coder');
