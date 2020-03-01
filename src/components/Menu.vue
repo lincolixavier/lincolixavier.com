@@ -40,13 +40,8 @@ export default {
 </script>
 
 <style lang="scss">
-*,div{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 .container-menu{
-  position: absolute;
+  position: fixed;
   height: 95vh;
   width: 95vw;
   border-radius: 13px;
@@ -167,6 +162,37 @@ export default {
     &.is-whatsapp{
       background-position: -396px 0;
     } 
+  }
+}
+@media screen and (max-width: 950px){
+  .nav-menu a {
+    font-size: 47px;
+  }
+  .contact {
+    width: 100%;
+    max-width: 90%;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .close-menu {
+    width: 27px;
+    left: 13px;
+    top: 25px;
+  }
+  .nav-menu {
+    height: 55%;
+  }
+  .nav-menu a {
+    font-size: 35px;
+  }
+  .contact  {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .contact .contact-icon {
+    transform: scale(0.6);
   }
 }
 

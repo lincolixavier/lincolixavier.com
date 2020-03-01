@@ -1,7 +1,8 @@
 export default {
-  "siteUrl": "https://www.lincolixavier.com",
-  "siteName": "Lincoli Xavier",
+  "trailingSlash": true,
+  "pathPrefix": "",
   "titleTemplate": "%s - Lincoli Xavier",
-  "siteDescription": "Meu humilde portifólio na internet",
-  "version": "0.6.9"
+  "siteUrl": "https://www.lincolixavier.com",
+  "version": "0.7.13",
+  "catchLinks": true
 }

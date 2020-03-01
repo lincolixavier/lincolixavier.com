@@ -1,6 +1,15 @@
 <template>
   <div class="container">
+
+    <!-- <ul>
+      <li v-for="item of documents" :key="item.id">
+        {{ item.data.title[0].text }} 
+      </li>
+    </ul> -->
     <Header :isHome="true" ></Header>
+    <div class="rwd">
+      <img src="../assets/rwd.png" alt="Code Design Side">
+    </div>
     <div @mousemove="mouseEnter"  @mouseleave="mouseLeave"  class="skillset-presentation">
       <div class="skillset-art">        
         <div class="skillset-side skillset-code-side">
@@ -25,10 +34,18 @@
   </div>
 </template>
 
+
 <script>
+import Vue from 'vue';
+import PrismicVue from 'prismic-vue';
+
+Vue.use(PrismicVue, {
+  endpoint: 'https://lincoli-xavier.cdn.prismic.io/api/v2',
+})
+
 export default {
   metaInfo: {
-    title: 'Hello, world!'
+    title: 'Lincoli Xavier | Frontend Developer & UI Designer'
   },
   data(){
     return{
@@ -38,11 +55,29 @@ export default {
       transition: false,
       relMouseX: 640,
       xp: 640,
+      documents: null,
 
     };
   },
-  mounted(){
-    // this.canvas();
+  beforeCreate () {
+    // GET POSTS
+    this.$prismic.client.query(
+      this.$prismic.Predicates.at('document.id', 'Xkw6-xEAACMAcjYD'),
+      // { orderings : '[my.blog_post.date desc]' }
+    ).then((response) => {
+      // response is the response object, response.results holds the documents
+      console.log(response);
+       this.documents = response.results;
+    });
+    // POST UNIQUE
+    this.$prismic.client.query(
+      this.$prismic.Predicates.at('document.id', 'Xkw6-xEAACMAcjYD'),
+      // { orderings : '[my.blog_post.date desc]' }
+    ).then((response) => {
+      // response is the response object, response.results holds the documents
+      console.log(response);
+       this.documents = response.results;
+    });
   },
   methods:{
     mouseLeave(){
@@ -245,7 +280,64 @@ export default {
       }
     }
   }
+  .rwd{
+    display: none;
+  }
 
+@media screen and (max-width: 1220px){
+  .skillset-presentation {
+    transform: scale(0.75);
+  }
+  
+}
+@media screen and (max-width: 950px){
+  .skillset-presentation {
+    margin-top: -60px;
+  }
+  .skillset-code-side .text-code {
+    font-size: 30px;
+    left: -26%;
+  }
+  .skillset-design-side .text-art {
+    font-size: 30px;
+    right: -46%;
+  }
+  
+}
 
+@media screen and (max-width: 670px){
+  .skillset-presentation {
+    display: none;
+  }
+  .skillset-code-side .text-code,.skillset-design-side .text-art  {
+    display: none;
+  }
+  .rwd {
+    padding: 30px;
+    display: block;
+    text-align: center;
+    img{
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 450px){
+  .container{
+    overflow: hidden;
+  }
+  .rwd {
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    img{
+      max-width: 134%;
+      margin: auto;
+    }
+  }
+  .button-toportfolio {
+    margin: 30px 0;
+  }
+}
 
 </style>

@@ -1,7 +1,7 @@
 <template>
     <header class="header" :class="{ 'is-home' : isHome !== true }">
       <div @click="toggleMenu" class="header-menu"></div>
-      <Menu :show="showMenu" style="position:absolute;"  :closeMenu="this.toggleMenu" />
+      <Menu :show="showMenu" style="position:fixed;"  :closeMenu="this.toggleMenu" />
       <div class="header-logo">
         <Logo />
       </div>
@@ -37,18 +37,14 @@ export default {
 
 <static-query>
 query {
-  metaData {
+  metadata {
     siteName
   }
 }
 </static-query>
 
 <style lang="scss">
-*,div{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+
 
 .header{
   display: flex;
@@ -79,11 +75,44 @@ query {
 .is-home{
   .header-logo{
     width: 263px;
-    margin-top: -31px;
     svg{
       width: 100%;
     }
   }
+}
+
+@media screen and (max-width: 1220px){
+  .header{
+    padding: 32px 20px 0px 22px;
+    height: 101px;
+    .header-mailme {
+      margin-top: 0;
+    }
+  }
+  .header-logo svg{
+    width: 229px;
+    top: -41px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .header {
+    padding: 32px 10px 0px 10px;
+    .header-menu {
+      width: 32px;
+      height: 18px;
+      &:after, &:before{
+        height: 3px;
+      }
+    }
+  }
+  .header-logo svg{
+    width: 150px;
+  }
+
+
+
 }
 
 
