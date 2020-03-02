@@ -22,7 +22,7 @@
         <a target="_blank" href="https://twitter.com/lincolixavier" class="contact-icon is-twitter"></a>
         <a target="_blank" href="https://www.linkedin.com/in/lincoli-xavier/" class="contact-icon is-linkedin"></a>
         <a target="_blank" href="https://www.instagram.com/lincolimonteiro/" class="contact-icon is-instagram"></a>
-        <a target="_blank" href="https://dribbble.com/lincolixavier" class="contact-icon is-dribbble"></a>
+        <a target="_blank" href="https://www.behance.net/lincolixavier1" class="contact-icon is-behance"></a>
         <a target="_blank" href="https://www.shutterstock.com/g/lincolimonteiro" class="contact-icon is-shutterstock"></a>
         <a target="_blank" href="https://api.whatsapp.com/send?phone=5571982706092&text=Oi!%20Posso%20te%20ajudar%20com%20seu%20projeto%20digital!%20%3DD%20Vamos%20conversar!" class="contact-icon is-whatsapp"></a>
       </div>
@@ -153,7 +153,7 @@ export default {
     &.is-instagram{
       background-position: -201px 0;
     }
-    &.is-dribbble{
+    &.is-behance{
       background-position: -266px 0;
     }
     &.is-shutterstock{
