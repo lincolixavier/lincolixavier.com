@@ -8,12 +8,12 @@
     </ul> -->
     <Header :isHome="true" ></Header>
     <div class="rwd">
-      <img src="../assets/rwd.png" alt="Code Design Side">
+      <img src="../assets/rwd.png" alt="Code Design Side" lazyload="true">
     </div>
     <div @mousemove="mouseEnter"  @mouseleave="mouseLeave"  class="skillset-presentation">
       <div class="skillset-art">        
         <div class="skillset-side skillset-code-side">
-          <img src="../assets/codeart.png">
+          <img src="../assets/codeart.png" alt="Code Side" lazyload="true">
           <input class="text-code"  value="<logic /> 👨🏻‍💻" type="text" disabled>
         </div>
 
@@ -23,7 +23,7 @@
         </div>
 
         <div class="skillset-side skillset-design-side">
-          <img src="../assets/designerart.png" alt="">
+          <img src="../assets/designerart.png" alt="Design Side" lazyload="true">
           <h1 class="text-art">art 👨🏻‍🎨</h1> 
         </div>
       </div>

@@ -4,18 +4,10 @@
 
       </div>
       <nav class="nav-menu">
-        <div @click="closeMenu" class="link">
-          <g-link @click="closeMenu"  to="/">home</g-link>
-        </div>
-        <div @click="closeMenu" class="link">
-          <g-link @click="closeMenu" to="/work-and-play/">work & play </g-link>
-        </div>
-        <div @click="closeMenu" class="link">
-          <g-link @click="closeMenu"  to="/about/">sobre</g-link>
-        </div>
-        <div class="link">
-          <a target="_blank" href="https://dev.to/lincolixavier">blog</a>
-        </div>
+          <g-link class="link" @click="closeMenu"  to="/" >home</g-link>
+          <g-link class="link" @click="closeMenu" to="/work-and-play/">work & play </g-link>
+          <g-link class="link" @click="closeMenu"  to="/about/">sobre</g-link>
+          <g-link class="link" target="_blank" to="https://dev.to/lincolixavier">blog</g-link >
       </nav>
       <div class="contact">
         <a target="_blank" href="https://github.com/lincolixavier" class="contact-icon is-github"></a>
@@ -42,8 +34,8 @@ export default {
 <style lang="scss">
 .container-menu{
   position: fixed;
-  height: 95vh;
-  width: 95vw;
+  height: 95%;
+  width: 95%;
   border-radius: 13px;
   left: 0;
   right: 0;
@@ -91,11 +83,13 @@ export default {
 }
 .nav-menu{
   height: 73%;
-  display: flex;
+  width: 100%;
+  column-count: 1;
+  flex-direction: column;
+  display: inline-flex;
   flex-wrap: wrap;
-  align-content: space-between;
+  align-content: center;
   .link{
-    width: 100%;
     cursor: pointer;
   }
   a{
