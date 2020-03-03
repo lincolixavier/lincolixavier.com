@@ -17,11 +17,11 @@
         <ul class="tags">
           <li class="tag wordpress">Wordpress</li>
           <li class="tag front">FrontEnd</li>
-          <li class="tag rwd">UI/UX</li>
+          <li class="tag responsive">UI/UX</li>
           <li class="tag html">HTML5</li>
           <li class="tag css">CSS3</li>
           <li class="tag git">Git</li>
-          <li class="tag rwd">RWD</li>
+          <li class="tag responsive">RWD</li>
           <li class="tag js">Javascript</li>
         </ul>
         <a target="_blank" href="http://curtaclownzone.com/" class="project-link">
@@ -48,12 +48,12 @@
         <ul class="tags">
           <li class="tag css">React</li>
           <li class="tag front">FrontEnd</li>
-          <li class="tag rwd">UI/UX</li>
+          <li class="tag responsive">UI/UX</li>
           <li class="tag html">HTML5</li>
           <li class="tag css">CSS3</li>
           <li class="tag css">Bulma</li>
           <li class="tag git">Git</li>
-          <li class="tag rwd">RWD</li>
+          <li class="tag responsive">RWD</li>
           <li class="tag js">Javascript</li>
         </ul>
         <a target="_blank" href="https://www.behance.net/gallery/93092637/Ui-Web-Tranpo?" class="project-link">
@@ -82,7 +82,7 @@
           <li class="tag html">HTML5</li>
           <li class="tag css">CSS3</li>
           <li class="tag git">Git</li>
-          <li class="tag rwd">RWD</li>
+          <li class="tag responsive">RWD</li>
           <li class="tag js">Javascript</li>
           <li class="tag css">GatsbyJS</li>
         </ul>
@@ -112,7 +112,7 @@
           <li class="tag html">HTML5</li>
           <li class="tag css">CSS3</li>
           <li class="tag git">Git</li>
-          <li class="tag rwd">RWD</li>
+          <li class="tag responsive">RWD</li>
           <li class="tag jquery">Jquery</li>
           <li class="tag js">Javascript</li>
         </ul>
@@ -142,7 +142,7 @@
           <li class="tag html">HTML5</li>
           <li class="tag css">CSS3</li>
           <li class="tag git">Git</li>
-          <li class="tag rwd">RWD</li>
+          <li class="tag responsive">RWD</li>
           <li class="tag opensource">Open Source</li>
           <li class="tag git">Github</li>
 
@@ -174,7 +174,7 @@
           <li class="tag html">HTML5</li>
           <li class="tag css">CSS3</li>
           <li class="tag jquery">Jquery</li>
-          <li class="tag rwd">RWD</li>
+          <li class="tag responsive">RWD</li>
         </ul>
         <a target="_blank" href="http://www.desenbahia.ba.gov.br/" class="project-link">
           <svg id="foreign" width="25" height="25" viewBox="0 0 25 25">
@@ -205,7 +205,7 @@
           <li class="tag html">HTML5</li>
           <li class="tag css">CSS3</li>
           <li class="tag jquery">Jquery</li>
-          <li class="tag rwd">RWD</li>
+          <li class="tag responsive">RWD</li>
         </ul>
         <a target="_blank" href="http://www.defensoria.ba.def.br/"  class="project-link">
           <svg id="foreign" width="25" height="25" viewBox="0 0 25 25">
@@ -348,7 +348,7 @@ export default {
       border-color: #1B359D;
       color: #1B359D;
     }
-    &.rwd{
+    &.responsive{
       border-color: #E13242;
       color: #E13242;
     }
