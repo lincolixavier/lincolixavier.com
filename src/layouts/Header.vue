@@ -2,7 +2,7 @@
     <header class="header" :class="{ 'is-home' : isHome !== true }">
       <div @click="toggleMenu" class="header-menu"></div>
       <Menu :show="showMenu" style="position:fixed;"  :closeMenu="this.toggleMenu" />
-      <g-link @click="closeMenu" class="header-logo"  to="/">
+      <g-link class="header-logo"  to="/">
        <Logo />
       </g-link>
       <a href="mailto:hello@lincolixavier.com" class="header-mailme">
@@ -55,6 +55,7 @@ query {
     height: 22px;
     display: block;
     position: relative;
+     cursor: pointer;
     &:after, &:before{
       content: '';
       position: absolute;

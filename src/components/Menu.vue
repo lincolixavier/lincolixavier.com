@@ -53,6 +53,7 @@ export default {
   visibility: hidden;
   z-index: -1;
   transition: all 0.2s ease-in-out;
+ 
   &.open{
     transform: scale(1);
     opacity: 1;
