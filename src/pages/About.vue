@@ -40,40 +40,43 @@
       <div class="skills-set">
         <h3>Front-end</h3>
         <ul>
-          <li>  Html</li>
-          <li>  CSS3 (Sass, Bulma) </li>
-          <li>  Design Responsivo</li>
-          <li>  Javascript</li>
-          <li>  Typescript</li>
-          <li>  Angular</li>
-          <li>  Vuejs</li>
-          <li>  Rest</li>
-          <li>  GraphQL</li>
-          <li>  GridSome</li>
+          <li>Html</li>
+          <li>CSS3 (Sass, Bulma, Styled Components) </li>
+          <li>Design Responsivo</li>
+          <li>Javascript</li>
+          <li>Typescript</li>
+          <li>Angular</li>
+          <li>Vue</li>
+          <li>React</li>
+          <li>React Native</li>
+          <li>Gridsome (Esse site =)</li>
+          <li>GatsbyJs</li>
+
         </ul>
       </div>
       <div class="skills-set">
         <h3>Backend</h3>
         <ul>
           <li>Wordpress</li>
+          <li>Woocommerce</li>
+          <li>MySQL</li>
           <li>NodeJS</li>
           <li>MongoDB</li>
-
         </ul>
       </div>
       <div class="skills-set">
-        <h3>Infra/Ferramentas</h3>
+        <h3>Ferramentas/Mentalidade</h3>
         <ul>
-           <li> Terminal</li>
-           <li> Git</li>
-           <li> VsCode</li>
-           <li> AWS</li>
-           <li> PostMan</li>
-           <li> Netlify</li>
-           <li> Heroku</li>
-           <li> Kanbam</li>
-           <li> Toggl</li>
-           <li> Café</li>
+           <li>Terminal</li>
+           <li>Git</li>
+           <li>PostMan</li>
+           <li>Netlify</li>
+           <li>Heroku</li>
+           <li>Toggl</li>
+           <li>Manisto Ágil</li>
+           <li>Extreme Programming</li>
+           <li>Spotify 🎶 </li>
+           <li>Café ☕</li>
         </ul>
       </div>
     </section>
@@ -166,7 +169,7 @@ export default {
   li{
     font-weight: 100;
     color: #5D5A5A;
-    font-size: 27px;
+    font-size: 24px;
     font-style: italic;
     list-style: none;
     position: relative;
