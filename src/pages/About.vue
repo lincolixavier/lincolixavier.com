@@ -73,7 +73,7 @@
            <li>Netlify</li>
            <li>Heroku</li>
            <li>Toggl</li>
-           <li>Manisto Ágil</li>
+           <li>Manifesto Ágil</li>
            <li>Extreme Programming</li>
            <li>Spotify 🎶 </li>
            <li>Café ☕</li>
