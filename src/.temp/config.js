@@ -3,6 +3,6 @@ export default {
   "pathPrefix": "",
   "titleTemplate": "%s - Lincoli Xavier",
   "siteUrl": "https://www.lincolixavier.com",
-  "version": "0.7.13",
+  "version": "0.7.23",
   "catchLinks": true
 }
