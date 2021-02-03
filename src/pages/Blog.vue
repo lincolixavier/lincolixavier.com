@@ -20,9 +20,6 @@
       </div>
     </section> -->
     
-
-
-
  
 </template>
 
@@ -53,3 +50,14 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+
+.title-blog{
+    color: #ff6b00;
+    &:after{
+        background: #ff6b00;
+    }
+}
+
+</style>

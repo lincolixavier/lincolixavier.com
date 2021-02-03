@@ -1,11 +1,5 @@
 <template>
   <div class="container">
-
-    <!-- <ul>
-      <li v-for="item of documents" :key="item.id">
-        {{ item.data.title[0].text }} 
-      </li>
-    </ul> -->
     <Header :isHome="true" ></Header>
     <div class="rwd">
       <img src="../assets/rwd.png" alt="Code Design Side" lazyload="true">
@@ -34,14 +28,8 @@
   </div>
 </template>
 
-
 <script>
 import Vue from 'vue';
-// import PrismicVue from 'prismic-vue';
-
-// Vue.use(PrismicVue, {
-//   endpoint: 'https://lincoli-xavier.cdn.prismic.io/api/v2',
-// })
 
 export default {
   metaInfo: {
@@ -56,29 +44,8 @@ export default {
       relMouseX: 640,
       xp: 640,
       documents: null,
-
     };
   },
-  // beforeCreate () {
-  //   // GET POSTS
-  //   this.$prismic.client.query(
-  //     this.$prismic.Predicates.at('document.id', 'Xkw6-xEAACMAcjYD'),
-  //     // { orderings : '[my.blog_post.date desc]' }
-  //   ).then((response) => {
-  //     // response is the response object, response.results holds the documents
-  //     console.log(response);
-  //      this.documents = response.results;
-  //   });
-  //   // POST UNIQUE
-  //   this.$prismic.client.query(
-  //     this.$prismic.Predicates.at('document.id', 'Xkw6-xEAACMAcjYD'),
-  //     // { orderings : '[my.blog_post.date desc]' }
-  //   ).then((response) => {
-  //     // response is the response object, response.results holds the documents
-  //     console.log(response);
-  //      this.documents = response.results;
-  //   });
-  // },
   methods:{
     mouseLeave(){
       let laptopCoder = document.querySelector('.laptop-coder');
@@ -129,9 +96,6 @@ export default {
     },
   }
 }
-
-
-
 </script>
 
 <style lang="scss">
@@ -174,7 +138,6 @@ export default {
     border: none;
     width: 227px;
   }
-
 }
 .skillset-design-side{
   right: -67px;
@@ -213,7 +176,6 @@ export default {
     &.open{
       right: 150px;
       width: 562px;
-
     }
     &.close{
       right: -63px;
@@ -288,8 +250,8 @@ export default {
   .skillset-presentation {
     transform: scale(0.75);
   }
-  
 }
+
 @media screen and (max-width: 950px){
   .skillset-presentation {
     margin-top: -60px;
@@ -302,7 +264,6 @@ export default {
     font-size: 30px;
     right: -46%;
   }
-  
 }
 
 @media screen and (max-width: 670px){
