@@ -34,7 +34,6 @@
           <li>Photoshop</li>
           <li>Illustrator</li>
           <li>Adobe XD</li>
-
         </ul>
       </div>
       <div class="skills-set">
@@ -42,15 +41,12 @@
         <ul>
           <li>Html</li>
           <li>CSS3 (Sass, Bulma, Styled Components) </li>
-          <li>Design Responsivo</li>
           <li>Javascript</li>
           <li>Typescript</li>
           <li>Angular</li>
-          <li>Vue</li>
-          <li>React</li>
-          <li>React Native</li>
-          <li>Gridsome (Esse site =)</li>
-          <li>GatsbyJs</li>
+          <li>Vue, Gridsome (Esse site =)</li>
+          <li>React, GatsbyJs</li>
+          <li>React Native + Expo</li>
 
         </ul>
       </div>
@@ -62,6 +58,7 @@
           <li>MySQL</li>
           <li>NodeJS</li>
           <li>MongoDB</li>
+          <li>Firebase</li>
         </ul>
       </div>
       <div class="skills-set">
@@ -74,7 +71,7 @@
            <li>Heroku</li>
            <li>Toggl</li>
            <li>Manifesto Ágil</li>
-           <li>Extreme Programming</li>
+           <li>eXtreme Programming</li>
            <li>Spotify 🎶 </li>
            <li>Café ☕</li>
         </ul>
@@ -90,12 +87,9 @@
         <a target="_blank" href="https://www.instagram.com/lincolimonteiro/" class="contact-icon is-instagram"></a>
         <a target="_blank" href="https://www.behance.net/lincolixavier1" class="contact-icon is-behance"></a>
         <a target="_blank" href="https://www.shutterstock.com/g/lincolimonteiro" class="contact-icon is-shutterstock"></a>
-        <a target="_blank" href="https://api.whatsapp.com/send?phone=5571982706092&text=Oi!%20Posso%20te%20ajudar%20com%20seu%20projeto%20digital!%20%3DD%20Vamos%20conversar!" class="contact-icon is-whatsapp"></a>
       </div>
     </section>
     </div>
-    
-
   </div>
 </template>
 

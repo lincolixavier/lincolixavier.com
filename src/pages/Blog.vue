@@ -1,10 +1,10 @@
 <template>
-<Layout>
-     <section class="posts">
-        <h1 class="title-page title-blog">blog</h1>
-        <Post v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
-    </section>
-</Layout>
+    <Layout>
+        <section class="posts">
+            <h1 class="title-page title-blog">blog</h1>
+            <Post class="post-container" v-for="edge in $page.allPost.edges" :key="edge.node.id" :post="edge.node" />
+        </section>
+    </Layout>
 
 
 
@@ -33,7 +33,7 @@
                     title
                     timeToRead
                     description
-                    date (format: "D MMMM YYYY")
+                    date (format: "DD\\/MM\\/YYYY",locale:"pt-BR")
                     path
                 }
             }
@@ -58,6 +58,9 @@ export default {
     &:after{
         background: #ff6b00;
     }
+}
+.post-container{
+    margin-bottom:25px;
 }
 
 </style>
