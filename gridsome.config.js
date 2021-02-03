@@ -8,6 +8,26 @@ module.exports = {
       options: {
         id: 'UA-159332315-1'
       }
-    }
-  ]
+    },
+    {
+      // Create posts from markdown files
+      use: '@gridsome/source-filesystem',
+      options: {
+          typeName: 'Post',
+          path: 'blog/posts/*.md',
+          route: '/blog/:slug',
+      }
+    },
+  ],
+  transformers: {
+        //Add markdown support to all file-system sources
+        remark: {
+            externalLinksTarget: '_blank',
+            externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+            anchorClassName: 'icon icon-link',
+            plugins: [
+                '@gridsome/remark-prismjs'
+            ]
+        }
+    },
 }

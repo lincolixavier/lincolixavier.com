@@ -7,7 +7,7 @@
           <g-link class="link" @click="closeMenu"  to="/" >home</g-link>
           <g-link class="link" @click="closeMenu" to="/work-and-play/">work & play </g-link>
           <g-link class="link" @click="closeMenu"  to="/about/">sobre</g-link>
-          <g-link class="link" target="_blank" to="https://dev.to/lincolixavier">blog</g-link >
+          <g-link class="link"  to="/blog/">blog</g-link >
       </nav>
       <div class="contact">
         <a target="_blank" href="https://github.com/lincolixavier" class="contact-icon is-github"></a>
@@ -16,7 +16,6 @@
         <a target="_blank" href="https://www.instagram.com/lincolimonteiro/" class="contact-icon is-instagram"></a>
         <a target="_blank" href="https://www.behance.net/lincolixavier1" class="contact-icon is-behance"></a>
         <a target="_blank" href="https://www.shutterstock.com/g/lincolimonteiro" class="contact-icon is-shutterstock"></a>
-        <a target="_blank" href="https://api.whatsapp.com/send?phone=5571982706092&text=Oi!%20Posso%20te%20ajudar%20com%20seu%20projeto%20digital!%20%3DD%20Vamos%20conversar!" class="contact-icon is-whatsapp"></a>
       </div>
     </div>
 </template>

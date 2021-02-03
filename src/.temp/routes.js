@@ -1,7 +1,15 @@
 export default [
   {
+    path: "/blog/:slug/",
+    component: () => import(/* webpackChunkName: "page--src--templates--post-vue" */ "/Users/lincolixavier/Documents/Projetos/lincolixavier/lincolixavier.com/src/templates/Post.vue")
+  },
+  {
     path: "/work-and-play/",
     component: () => import(/* webpackChunkName: "page--src--pages--work-and-play-vue" */ "/Users/lincolixavier/Documents/Projetos/lincolixavier/lincolixavier.com/src/pages/WorkAndPlay.vue")
+  },
+  {
+    path: "/blog/",
+    component: () => import(/* webpackChunkName: "page--src--pages--blog-vue" */ "/Users/lincolixavier/Documents/Projetos/lincolixavier/lincolixavier.com/src/pages/Blog.vue")
   },
   {
     path: "/about/",

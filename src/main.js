@@ -2,6 +2,7 @@
 import '~/assets/main.scss'
 import Header from '~/layouts/Header.vue'
 import Logo from '~/components/Logo.vue'
+import Default from '~/layouts/Default.vue'
 
 
 export default function (Vue, { router, head, isClient }) {
@@ -22,6 +23,7 @@ export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Header', Header);
   Vue.component('Logo', Logo);
+  Vue.component('Layout', Default);
 
 
 }
