@@ -1,12 +1,9 @@
 <template>
-  <div class="container-about">
-    
-    <Header :isHome="false" ></Header>
-    <div class="container-page">
+  <Layout>
       <div class="title-page title-about">
-      sobre mim
-    </div>
-    <section class="about-me">
+        sobre mim
+      </div>
+     <section class="about-me">
       <img src="../assets/profile.png" alt="Foto: Lincoli Xavier" class="picture">
       <div class="description">
         <p>
@@ -55,7 +52,6 @@
         <ul>
           <li>Wordpress</li>
           <li>Woocommerce</li>
-          <li>MySQL</li>
           <li>NodeJS</li>
           <li>MongoDB</li>
           <li>Firebase</li>
@@ -66,19 +62,19 @@
         <ul>
            <li>Terminal</li>
            <li>Git</li>
-           <li>PostMan</li>
+           <li>Manifesto Ágil</li>
+           <li>eXtreme Programming</li>
            <li>Netlify</li>
            <li>Heroku</li>
            <li>Toggl</li>
-           <li>Manifesto Ágil</li>
-           <li>eXtreme Programming</li>
+           <li>Wakatime</li>
+           <li>Discord, Slack</li>
            <li>Spotify 🎶 </li>
            <li>Café ☕</li>
         </ul>
       </div>
     </section>
-    </div>
-  </div>
+  </Layout>
 </template>
 
 <script>
@@ -90,10 +86,7 @@ export default {
 </script>
 
 <style lang="scss">
-.container-page{
-  width: 93%;
-  margin: auto;
-}
+
 .title-about{
   color: #7488ec;
   &:after{

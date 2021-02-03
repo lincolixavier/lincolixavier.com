@@ -6,6 +6,8 @@ import Footer from '~/layouts/Footer.vue'
 import Logo from '~/components/Logo.vue'
 import Default from '~/layouts/Default.vue'
 import VueDisqus from 'vue-disqus'
+//require("gridsome-plugin-remark-prismjs-all/themes/tomorrow.css");
+require("gridsome-plugin-remark-prismjs-all/themes/solarized.css");
 
 export default function (Vue, { router, head, isClient }) {
 

@@ -2,7 +2,6 @@
 title: "Como ganhar dinheiro sendo programador?"
 description: "Quem não precisa de dinheiro que atire a primeira pedra (pessoas com mais de 6 dígitos na conta bancária, não podem brincar)"
 date: 2020-01-10
-slug: asd
 ---
 
 ### *Quem não precisa de dinheiro que atire a primeira pedra (pessoas com mais de 6 dígitos na conta bancária, não podem brincar)*

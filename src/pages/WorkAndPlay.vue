@@ -1,9 +1,6 @@
 <template>
-  <div class="container-about">
-    
-    <Header :isHome="false" ></Header>
-    <div class="container-page">
-      <div class="title-page title-work">
+  <Layout>
+    <div class="title-page title-work">
       work & play
     </div>
 
@@ -225,24 +222,7 @@
       </article>
       
     </section>
-
-
-    <section class="contact-me">
-      <h1 class="title-section">Entre em contato: </h1>
-      <div class="contact-socialmedia">
-        <a target="_blank" href="https://github.com/lincolixavier" class="contact-icon is-github"></a>
-        <a target="_blank" href="https://twitter.com/lincolixavier" class="contact-icon is-twitter"></a>
-        <a target="_blank" href="https://www.linkedin.com/in/lincoli-xavier/" class="contact-icon is-linkedin"></a>
-        <a target="_blank" href="https://www.instagram.com/lincolimonteiro/" class="contact-icon is-instagram"></a>
-        <a target="_blank" href="https://www.behance.net/lincolixavier1" class="contact-icon is-behance"></a>
-        <a target="_blank" href="https://www.shutterstock.com/g/lincolimonteiro" class="contact-icon is-shutterstock"></a>
-        <a target="_blank" href="https://api.whatsapp.com/send?phone=5571982706092&text=Oi!%20Posso%20te%20ajudar%20com%20seu%20projeto%20digital!%20%3DD%20Vamos%20conversar!" class="contact-icon is-whatsapp"></a>
-      </div>
-    </section>
-    </div>
-    
-
-  </div>
+  </Layout>
 </template>
 
 <script>
@@ -254,10 +234,7 @@ export default {
 </script>
 
 <style lang="scss">
-.container-page{
-  width: 93%;
-  margin: auto;
-}
+
 .title-work{
   color: #61CC33;
   &:after{
@@ -265,13 +242,7 @@ export default {
   }
 }
 
-.title-section{
-  font-weight: bold;
-  color: #61CC33;
-  font-size: 34px;
-  margin: 30px 0;
-  width: 100%;
-}
+
 .section-workplay{
   display: flex;
   justify-content: flex-start;
@@ -458,89 +429,6 @@ export default {
   }
 }
 
-.contact-me{
-  margin-bottom: 70px;
-}
-.contact-socialmedia{
-  padding: 20px 0;
-  display: flex;
-  width: 90%;
-  margin: 20px auto;
-  justify-content: space-around;
-  .contact-icon{
-    width: 60px;
-    height: 57px;
-    display: block;
-    margin: 0 5px;
-    display: flex;
-    justify-content: center;
-    background: url(../assets/sprite_social.svg) no-repeat;
-    position: relative;
-    &:before{
-      top: 0;
-      padding: 3px;
-      border-radius: 6px;
-      color: #FFF;
-      position: absolute;
-      opacity: 0;
-      transition: all 150ms ease-in-out;
-    }
-    &:hover:before{
-      opacity: 1;
-      top: -26px;
-    }
-    &.is-github{
-      background-position: 0 -68px;
-      &:before{
-        content: 'Github';
-        background: #6d6d6d;
-      }
-    }
-    &.is-twitter{
-      background-position: -68px -68px;
-      &:before{
-        content: 'Twitter';
-        background: #68bbff;
-      }
-    }
-    &.is-linkedin{
-      background-position: -135px -68px;
-      &:before{
-        content: 'LinkedIn';
-        background: #3d62db;
-      }
-    }
-    &.is-instagram{
-      background-position: -201px -68px;
-      &:before{
-        content: 'Instagram';
-        background: #630a6e;
-      }
-    }
-    &.is-behance{
-      background-position: -266px -68px;
-      &:before{
-        content: 'Behance';
-        background: #5017f0;
-      }
-    }
-    &.is-shutterstock{
-      background-position: -330px -68px;
-      &:before{
-        content: 'Shutterstock';
-        background: #db3535;
-      }
-    }
-    &.is-whatsapp{
-      background-position: -396px -68px;
-      &:before{
-        content: 'WhatsApp';
-        background: #20cf46;
-      }
-    } 
-  }
-}
-
 @media screen and (max-width: 700px){
  .section-workplay .project {
     width: 100%;
@@ -549,19 +437,6 @@ export default {
   } 
   .container-page {
     overflow: hidden;
-  }
-  .title-section {
-    font-size: 21px;
-    text-align: center;
-    margin: 30px 0 0;
-  }
-  .contact-socialmedia {
-    padding: 0px 0;
-    justify-content: center;
-    flex-wrap: wrap;
-    a{
-      transform: scale(0.7);
-    }
   }
 }
 

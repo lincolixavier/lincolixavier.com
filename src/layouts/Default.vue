@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container-page">
       <Header :isHome="false" ></Header>
       <transition name="fade" appear>
         <main>
@@ -10,16 +10,14 @@
     </div>
 </template>
 
-  <static-query>
-query {
-  metaData {
-    siteName
-  }
-  
-}
-</static-query>
-
 <style>
+  main{
+    margin-bottom: 100px;
+  }
+  .container-page{
+    width: 93%;
+    margin: auto;
+  }
   .fade-enter-active {
     transition: opacity .5s;
   }

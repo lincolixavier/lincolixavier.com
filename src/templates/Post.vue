@@ -57,7 +57,7 @@
     position: relative;
 }
 .post-title{
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 .title{
     color: #ff6b00;
@@ -70,22 +70,36 @@
 .post-content{
     h2,h3,h5,h6{
         color: #545454;
-        margin-bottom: 20px;
+        margin: 30px 0 10px;
     }
     h4{
         color: #545454;
-        margin: 20px 0;
+        margin: 40px 0 20px;
     }
     p{
         color: #545454;
         font-size: 19px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         line-height: 29px;
     }
     a{
         background: #ff6b00;
         color:#FFF;
         text-decoration: none;
+    }
+    pre{
+        margin-bottom:25px;
+    }
+    blockquote{
+        background: #f7f7f7;
+        padding: 8px;
+        margin: 0;
+        font-style: italic;
+        border-left: 5px solid #ff6b00;
+        p{
+            margin: 0;
+            font-size: 16px;
+        }
     }
 }
 .comments-title{
