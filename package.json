@@ -11,7 +11,8 @@
     "@gridsome/remark-prismjs": "^0.1.0",
     "@gridsome/source-filesystem": "^0.5.0",
     "@gridsome/transformer-remark": "^0.6.4",
-    "gridsome": "^0.7.13"
+    "gridsome": "^0.7.13",
+    "vue-disqus": "^4.0.1"
   },
   "devDependencies": {
     "node-sass": "^4.14.1",

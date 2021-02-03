@@ -1,5 +1,4 @@
 <template>
-  <div class="py-5">
     <div class="container">
       <Header :isHome="false" ></Header>
       <transition name="fade" appear>
@@ -7,11 +6,8 @@
           <slot/>
         </main>
       </transition>
+      <Footer/>
     </div>
-    <!-- <div class="container">
-      <Footer />
-    </div> -->
-  </div>
 </template>
 
   <static-query>

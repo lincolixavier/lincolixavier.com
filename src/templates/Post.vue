@@ -10,8 +10,14 @@
             <g-link to="/blog" class="back-button">  &larr; Todos os posts</g-link>
 
         </article>
+        <div class="comments-area">
+            <h2 class="comments-title">Comentários 💬</h2>
+            <Disqus shortname="www-lincolixavier-com" :identifier="$page.post.title" />
+        </div>
 
     </Layout>
+
+
 </template>
 <page-query>
     query Post ($path: String!) {
@@ -40,7 +46,7 @@
 }
 .back-button{
     text-decoration: none;
-    color: #f1b68a;
+    color: #f55700;
     margin: 30px 0;
     display: block;
 }
@@ -81,6 +87,15 @@
         color:#FFF;
         text-decoration: none;
     }
+}
+.comments-title{
+    color: #ff6b00;
+    font-size: 25px;
+}
+.comments-area{
+    max-width: 990px;
+    margin: 30px auto;
+    width: 90%;
 }
 
 </style>
