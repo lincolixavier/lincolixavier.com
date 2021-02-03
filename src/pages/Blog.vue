@@ -44,7 +44,7 @@ export default {
     }
 }
 .post-container{
-    margin-bottom:25px;
+    margin-bottom:15px;
 }
 
 </style>

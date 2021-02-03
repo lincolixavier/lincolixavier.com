@@ -7,7 +7,7 @@ date: 2021-01-15
 
 Vamos dar um panorama de algumas Web Api's que fazem verdadeiras mágicas, especialmente em dispositivos móveis.
 
-## Ambient Light Events 💡
+## 1. Ambient Light Events 💡
 
 Quando o sensor de luz de um dispositivo detecta uma mudança no nível de luz, ele notifica o navegador dessa mudança. Imagine o que dá pra fazer com fotografias, ambientes escuros ou contrastes de acessibilidade Instantâneos!
 
@@ -31,27 +31,27 @@ Exemplo:
 > Compatibilidade - Firefox, Firefox Android	
 
 
-## Web Bluetooth API 📲
+## 2. Web Bluetooth API 📲
 
 Isso mesmo, você tem acesso ao bluetooth via browser 💙
 
 > Compatibilidade - Chrome, Edge,	Opera, Chrome Android, Opera Android, Samsung Internet
 
 
-## Broadcast Channel API 🛰️
+## 3. Broadcast Channel API 🛰️
 
 Compartilhando de informações entre janelas, tabs, iframes etc, quem já teve problema em precisar integrar esse tipo de comunicação, essa api é salvação.
 
 > Compatibilidade - Chrome, Edge,	Firefox, Opera, WebView Android, Chrome Android, Opera Android, Samsung Internet
 
-## Contact Picker API 👥👥
+## 4. Contact Picker API 👥👥
 
 Você tem acesso aos contatos do telefone via browser (: Usar informações como nome, email, telefone, endereço e ícone se estiverem disponíveis, a aplicabilidade disso é quase infinita. 
 
 > Compatibilidade - Opera, WebView Android,	Chrome Android, Opera Android, Samsung Internet
 
 
-## Web Video Text Tracks Format (WebVTT) 🔠
+## 5. Web Video Text Tracks Format (WebVTT) 🔠
 
 Outra grande amiga da acessibilidade, quer colocar legenda nos seus vídeos? usando a tag ``<video>``? É possível costumizar via css as legendas também. Vai fundo nessa lindeza =D
 
@@ -76,12 +76,12 @@ WEBVTT
 ```
 > Compatibilidade - Todos os browsers modernos
 
-## The WebSocket API 🔁
+## 6. The WebSocket API 🔁
 
 Essa é uma verdadeira mágica! Com essa API, você pode enviar mensagens a um servidor e receber respostas orientadas a eventos sem precisar consultar o servidor para obter uma resposta. Realtime meus amigos <3
 > Compatibilidade - Todos os browsers modernos
 
-## Screen Capture API  🖥️
+## 7. Screen Capture API  🖥️
 
 A mágica do print! Super simples de usar!
 
@@ -100,7 +100,7 @@ Exemplo:
 ```
 > Compatibilidade - Chrome, Edge,	Firefox, Opera, Safari
 
-## Proximity Events 🤳
+## 8. Proximity Events 🤳
 
 Sabe quando a tela desliga quando coloca o telefone no ouvido? Então, essa api te dá esse poder. Detecta quando o usuário está longe do dispositivo.
 
@@ -120,7 +120,7 @@ Bem intuitiva a implementação:
 > Compatibilidade -	Firefox, Firefox Android
 
 
-## Picture-in-Picture API
+## 9. Picture-in-Picture API
 
 Comum no whatsapp, facebook, youtube. Essa API permite criar o vídeo flutuante em cima de outras janelas para que os usuários possam continuar a consumir mídia enquanto interagem com outros sites de conteúdo ou aplicativos em seus dispositivos.
 

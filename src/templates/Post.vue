@@ -59,7 +59,7 @@
 .post-title{
     margin-bottom: 60px;
 }
-.title{
+.container-post .title{
     color: #ff6b00;
     font-size: 44px;
     letter-spacing: 4px;
@@ -87,6 +87,9 @@
         color:#FFF;
         text-decoration: none;
     }
+    img{
+        max-width: 100%;
+    }
     pre{
         margin-bottom:25px;
     }
@@ -111,5 +114,31 @@
     margin: 30px auto;
     width: 90%;
 }
+
+@media screen and (max-width: 900px){
+  
+    .container-post .title {
+        font-size: 25px;
+        line-height: 30px;
+        margin-bottom: 5px;
+    }
+    .post-date{
+        font-size: 13px;
+    }
+    .post-content{
+        h3{
+            font-size: 15px;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+            line-height: 23px;
+        }
+    }
+    .post-title {
+        margin-bottom: 40px;
+    }
+}
+
 
 </style>

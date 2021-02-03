@@ -40,4 +40,3 @@ Assim tudo que você fizer vai ser bem feito, e tudo que é bem feito alguém va
 ### Muito obrigado por ler até aqui. :) Grande abraço!
 
 *Essa é a primeira vez que escrevo, o que achou ? Vamos continuar o papo nos comentários, no meu [twitter](https://twitter.com/lincolixavier), ia curtir muito trocar essa idéia. :)*
-```

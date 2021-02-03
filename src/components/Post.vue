@@ -69,4 +69,18 @@
     }
 
 }
+
+@media screen and (max-width: 900px){
+  
+    .post .title {
+        font-size: 27px;
+        line-height: 30px;
+        margin: 3px 0 10px;
+    }
+    .post .description {
+        color: #333;
+        font-size: 15px;
+    }
+    
+}
 </style>
