@@ -269,7 +269,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 670px){
+@media screen and (max-width: 720px){
   .skillset-presentation {
     display: none;
   }
