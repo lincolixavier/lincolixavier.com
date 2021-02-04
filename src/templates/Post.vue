@@ -51,7 +51,7 @@
     display: block;
 }
 .container-post{
-    max-width: 990px;
+    max-width: 780px;
     margin: auto;
     width: 90%;
     position: relative;

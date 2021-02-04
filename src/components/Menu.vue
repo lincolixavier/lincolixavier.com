@@ -1,8 +1,6 @@
 <template>
-    <div :class="{open : show}" class="container-menu">
-      <div @click="closeMenu" class="close-menu">
-
-      </div>
+    <div :class="{open : show}" @keydown.esc="closeEsc" class="container-menu">
+      <div @click="closeMenu" class="close-menu"></div>
       <nav class="nav-menu">
           <g-link class="link" @click="closeMenu"  to="/" >home</g-link>
           <g-link class="link" @click="closeMenu" to="/work-and-play/">work & play </g-link>
@@ -20,13 +18,24 @@
     </div>
 </template>
 
-<script>
+<script >
 export default {
   name: 'Menu',
-  props:{
+  props: {
     show: false,
     closeMenu: Function
+  },
+  methods: {
+    
+    close() {
+      this.showMenu = !this.showMenu;
+    },
+
+    closeEsc() {
+      this.show = false;console.log('this.show', this.show);
+    }
   }
+  
 }
 </script>
 

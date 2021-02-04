@@ -1,7 +1,7 @@
 <template>
     <header class="header" :class="{ 'is-home' : isHome !== true }">
       <div @click="toggleMenu" class="header-menu"></div>
-      <Menu :show="showMenu" style="position:fixed;"  :closeMenu="this.toggleMenu" />
+      <Menu :show="showMenu"  style="position:fixed;"  :closeMenu="this.toggleMenu" />
       <g-link class="header-logo"  to="/">
        <Logo />
       </g-link>
@@ -14,7 +14,10 @@
 <script>
 
 import Menu from '@/components/Menu.vue';
+import closeMixin from '@/mixins/close.js';
+
 export default {
+  mixins: [closeMixin],
   name: 'Header',
   components: {
     Menu,
@@ -30,7 +33,13 @@ export default {
   methods:{
     toggleMenu(){
       this.showMenu = !this.showMenu;
+    },
+    close() {
+      this.showMenu = false;
     }
+  },
+  updated() {
+    this.closeEsc();
   }
 }
 </script>

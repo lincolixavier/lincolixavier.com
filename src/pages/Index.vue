@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Header :isHome="true" ></Header>
+    <Header @keydown.esc="closeEsc" :isHome="true" ></Header>
     <div class="rwd">
       <img src="../assets/rwd.png" alt="Code Design Side" lazyload="true">
     </div>
@@ -47,6 +47,9 @@ export default {
     };
   },
   methods:{
+    closeEsc() {
+      console.log('this.show');
+    },
     mouseLeave(){
       let laptopCoder = document.querySelector('.laptop-coder');
       let laptopDesigner = document.querySelector('.laptop-designer');
