@@ -30,7 +30,7 @@ export default function (Vue, { router, head, isClient }) {
   Vue.component('Logo', Logo);
   Vue.component('Layout', Default);
   Vue.use(VueDisqus)  
-
-
+  Vue.prototype.$document = window.document;
+  
 
 }

@@ -14,10 +14,8 @@
 <script>
 
 import Menu from '@/components/Menu.vue';
-import closeMixin from '@/mixins/close.js';
 
 export default {
-  mixins: [closeMixin],
   name: 'Header',
   components: {
     Menu,
@@ -34,13 +32,7 @@ export default {
     toggleMenu(){
       this.showMenu = !this.showMenu;
     },
-    close() {
-      this.showMenu = false;
-    }
   },
-  updated() {
-    this.closeEsc();
-  }
 }
 </script>
 
