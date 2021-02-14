@@ -1,10 +1,10 @@
 <template>
-    <div :class="{open : show}" @keydown.esc="closeEsc" class="container-menu">
-      <div @click="closeMenu" class="close-menu"></div>
+    <div :class="{open : show}" class="container-menu">
+      <div @click="close" class="close-menu"></div>
       <nav class="nav-menu">
-          <g-link class="link" @click="closeMenu"  to="/" >home</g-link>
-          <g-link class="link" @click="closeMenu" to="/work-and-play/">work & play </g-link>
-          <g-link class="link" @click="closeMenu"  to="/about/">sobre</g-link>
+          <g-link class="link" @click="close"  to="/" >home</g-link>
+          <g-link class="link" @click="close" to="/work-and-play/">work & play </g-link>
+          <g-link class="link" @click="close"  to="/about/">sobre</g-link>
           <g-link class="link"  to="/blog/">blog</g-link >
       </nav>
       <div class="contact">
@@ -23,18 +23,23 @@ export default {
   name: 'Menu',
   props: {
     show: false,
-    closeMenu: Function
   },
   methods: {
-    
     close() {
-      this.showMenu = !this.showMenu;
-    },
-
-    closeEsc() {
-      this.show = false;console.log('this.show', this.show);
+      this.$emit('close', this.show);
     }
-  }
+  },
+  created() {
+    const onEscape = (e) => {
+      if (this.show && e.keyCode === 27) {
+        this.close()
+      }
+    }
+    document.addEventListener('keydown', onEscape)
+    this.$once('hook:destroyed', () => {
+      document.removeEventListener('keydown', onEscape)
+    })
+  },
   
 }
 </script>

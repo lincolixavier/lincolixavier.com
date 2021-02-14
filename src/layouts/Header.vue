@@ -1,7 +1,7 @@
 <template>
     <header class="header" :class="{ 'is-home' : isHome !== true }">
-      <div @click="toggleMenu" class="header-menu"></div>
-      <Menu :show="showMenu"  style="position:fixed;"  :closeMenu="this.toggleMenu" />
+      <div @click="showMenu = true" class="header-menu"></div>
+      <Menu :show="showMenu" @close="showMenu = false"  style="position:fixed;" />
       <g-link class="header-logo"  to="/">
        <Logo />
       </g-link>
@@ -27,12 +27,7 @@ export default {
     return{
       showMenu: false,
     };
-  },
-  methods:{
-    toggleMenu(){
-      this.showMenu = !this.showMenu;
-    },
-  },
+  }
 }
 </script>
 

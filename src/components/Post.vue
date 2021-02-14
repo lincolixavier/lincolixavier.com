@@ -1,7 +1,7 @@
 <template>
     <article class="post">
         <label class="time-to-read">{{ `${post.date} - ${post.timeToRead} min de leitura`}}</label>
-        <g-link :to="post.path" target="_blank" class="read">
+        <g-link :to="pogtst.path" target="_blank" class="read">
             <h1 class="title" v-html="post.title"/>
         </g-link>
         <p class="description" v-html="post.description"/>
