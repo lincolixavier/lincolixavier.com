@@ -14,8 +14,16 @@ module.exports = {
       use: '@gridsome/source-filesystem',
       options: {
           typeName: 'Post',
-          path: 'blog/posts/*.md',
+          path: 'content/posts/*.md',
           route: '/blog/:slug',
+      }
+    },
+    {
+      // Create jobs from markdown files
+      use: '@gridsome/source-filesystem',
+      options: {
+          typeName: 'Jobs',
+          path: 'content/jobs/*.md'
       }
     },
   ],

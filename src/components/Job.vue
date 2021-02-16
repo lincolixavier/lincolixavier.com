@@ -1,53 +1,41 @@
 <template>
-  <Layout>
-    <div class="title-page title-work">
-      work & play
-    </div>
+    <article class="project" :class="job.colorTheme">
+        <h1 class="project-title">{{job.title}}</h1>
+        <p class="project-description">
+            {{job.description}}
+        </p>
 
-    <section class="section-workplay">
-      
-      <Job class="post-container" v-for="edge in $page.allJobs.edges" :key="edge.node.id" :job="edge.node" />
-      
-    </section>
-  </Layout>
+        <ul class="tags">
+          <li :class="'tag ' + tag" v-for="tag in job.tags">{{ tag }}</li>
+        </ul>
+        <a target="_blank" :href="job.linkToProject" class="project-link">
+          <svg id="foreign" width="25" height="25" viewBox="0 0 25 25">
+            <g id="Grupo_143" data-name="Grupo 143" transform="translate(9.091)">
+              <g id="Grupo_142" data-name="Grupo 142">
+                <path id="Caminho_218" data-name="Caminho 218" d="M200.955,0h-9.091a1.136,1.136,0,0,0,0,2.273h6.348l-11.7,11.7a1.136,1.136,0,1,0,1.607,1.607l11.7-11.7v6.347a1.136,1.136,0,0,0,2.273,0V1.136A1.136,1.136,0,0,0,200.955,0Z" transform="translate(-186.182)"/>
+              </g>
+            </g>
+            <g id="Grupo_145" data-name="Grupo 145" transform="translate(0 4.545)">
+              <g id="Grupo_144" data-name="Grupo 144">
+                <path id="Caminho_219" data-name="Caminho 219" d="M19.318,99.909a1.136,1.136,0,0,0-1.136,1.136v10.227H2.273V95.364H12.5a1.136,1.136,0,1,0,0-2.273H1.136A1.136,1.136,0,0,0,0,94.227v18.182a1.136,1.136,0,0,0,1.136,1.136H19.318a1.136,1.136,0,0,0,1.136-1.136V101.046A1.136,1.136,0,0,0,19.318,99.909Z" transform="translate(0 -93.091)"/>
+              </g>
+            </g>
+          </svg>
+          Veja o projeto
+        </a>
+      </article>
 </template>
-<page-query>
-  query {
-    allJobs{
-        edges {
-            node {
-                title
-                description
-                tags
-                linkToProject	
-                colorTheme
-            }
-        }
-    }
-  }
-</page-query>
-
 
 <script>
-import Job from '@/components/Job';
-
-export default {
-  components: { Job },
-  metaInfo: {
-    title: 'Work & Play'
-  }
-}
+    export default {
+        name: "Job",
+        props: {
+            job: Object,
+        },
+    }
 </script>
 
 <style lang="scss">
-
-.title-work{
-  color: #61CC33;
-  &:after{
-    background: #61CC33;
-  }
-}
-
 
 .section-workplay{
   display: flex;
@@ -105,19 +93,19 @@ export default {
     margin-right: 10px;
     margin-bottom: 10px;
     padding: 4px 10px;
-    &.front{
+    &.frontend{
       border-color: #FF0000;
       color: #FF0000;
     }
-    &.js{
+    &.javascript{
       border-color: #FFDE53;
       color: #807B00;
     }
-    &.html{
+    &.html5{
       border-color: #FF550A;
       color: #FF550A;
     }
-    &.css{
+    &.css3{
       border-color: #4A67DE;
       color: #4A67DE;
     }
@@ -125,7 +113,7 @@ export default {
       border-color: #1B359D;
       color: #1B359D;
     }
-    &.responsive{
+    &.rwd{
       border-color: #E13242;
       color: #E13242;
     }
@@ -141,7 +129,7 @@ export default {
       border-color: #6C6C6C;
       color: #6C6C6C;
     }
-    &.opensource{
+    &.open-source{
       border-color: rgb(20, 150, 81);
       color: rgb(18, 145, 77);
     }
