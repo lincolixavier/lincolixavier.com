@@ -37,11 +37,7 @@
 
 <style lang="scss">
 
-.section-workplay{
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  .project{
+.project{
     width: 45%;
     padding: 20px;
     margin: 15px;
@@ -68,7 +64,6 @@
     }
 
   }
-}
 
 .project-title{
   font-weight: 100;
@@ -89,7 +84,7 @@
     border-style: solid;
     border-radius: 4px;
     font-weight: 100;
-    font-size: 17px;
+    font-size: 14px;
     margin-right: 10px;
     margin-bottom: 10px;
     padding: 4px 10px;
@@ -108,6 +103,22 @@
     &.css3{
       border-color: #4A67DE;
       color: #4A67DE;
+    }
+    &.bulma{
+      border-color: #4A67DE;
+      color: #4A67DE;
+    }
+    &.react{
+      border-color: #1b37a9;
+      color: #1b37a9;
+    }
+    &.gatsbyjs{
+      border-color: #1b37a9;
+      color: #1b37a9;
+    }
+    &.ui-ux{
+      border-color: #1b37a9;
+      color: #1b37a9;
     }
     &.jquery{
       border-color: #1B359D;
