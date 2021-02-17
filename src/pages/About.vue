@@ -4,15 +4,15 @@
         sobre mim
       </div>
      <section class="about-me">
-      <img src="../assets/profile.png" alt="Foto: Lincoli Xavier" class="picture">
+      <img class="profile-img" src="../assets/profile.png" alt="Foto: Lincoli Xavier">
       <div class="description">
         <p>
-          Olá! Meu nome é Lincoli, eu projeto e programo belas interfaces pra Web e Mobile, 
+          Olá! Meu nome é Lincoli, eu projeto e programo interfaces pra Web e Mobile, 
           às vezes indo para o backend e sou apaixonado pelo que faço. 
         </p>
         <p>
           Eu sou muito animado \o/, naturalmente curioso, mochileiro e nômade digital que não para no lugar nem de 
-          buscar o melhor como pessoa e profissional.
+          buscar o melhor como pessoa e profissional. 
         </p>
         <p>
           Quando não estou desenhando algo ou programando eu passo o 
@@ -64,8 +64,7 @@
            <li>Git</li>
            <li>Manifesto Ágil</li>
            <li>eXtreme Programming</li>
-           <li>Netlify</li>
-           <li>Heroku</li>
+           <li>Netlify, Heroku</li>
            <li>Toggl</li>
            <li>Wakatime</li>
            <li>Discord, Slack</li>
@@ -97,6 +96,10 @@ export default {
 .about-me{
   display: flex;
   align-items: flex-start;
+  .profile-img{
+    width: 90%;
+    max-width: 445px;
+  }
   .description{
     margin-left: 35px;
     p{
