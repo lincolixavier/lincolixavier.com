@@ -1,8 +1,7 @@
 <template>
-      <transition name="fade" appear>
-        <router-view />
-      </transition>
-
+  <transition name="fade" appear>
+    <router-view />
+  </transition>
 </template>
 
 <static-query>
@@ -21,18 +20,18 @@ export default {
       title: this.$static.metadata.siteName,
       meta: [
         {
-          key: 'description',
-          name: 'description',
-          content: this.$static.metadata.siteDescription
-        }
-      ]
-    }
-  }
-}
+          key: "description",
+          name: "description",
+          content: this.$static.metadata.siteDescription,
+        },
+      ],
+    };
+  },
+};
 </script>
 <style>
 .fade-enter-active {
-  transition: opacity .5s;
+  transition: opacity 0.5s;
 }
 
 .fade-enter {

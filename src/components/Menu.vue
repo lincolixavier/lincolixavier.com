@@ -1,53 +1,78 @@
 <template>
-    <div :class="{open : show}" class="container-menu">
-      <div @click="close" class="close-menu"></div>
-      <nav class="nav-menu">
-          <g-link class="link" @click="close"  to="/" >home</g-link>
-          <g-link class="link" @click="close" to="/work-and-play/">work & play </g-link>
-          <g-link class="link" @click="close"  to="/about/">sobre</g-link>
-          <g-link class="link"  to="/blog/">blog</g-link >
-      </nav>
-      <div class="contact">
-        <a target="_blank" href="https://github.com/lincolixavier" class="contact-icon is-github"></a>
-        <a target="_blank" href="https://twitter.com/lincolixavier" class="contact-icon is-twitter"></a>
-        <a target="_blank" href="https://www.linkedin.com/in/lincoli-xavier/" class="contact-icon is-linkedin"></a>
-        <a target="_blank" href="https://www.instagram.com/lincolimonteiro/" class="contact-icon is-instagram"></a>
-        <a target="_blank" href="https://www.behance.net/lincolixavier1" class="contact-icon is-behance"></a>
-        <a target="_blank" href="https://www.shutterstock.com/g/lincolimonteiro" class="contact-icon is-shutterstock"></a>
-      </div>
+  <div :class="{ open: show }" class="container-menu">
+    <div @click="close" class="close-menu"></div>
+    <nav class="nav-menu">
+      <g-link class="link" @click="close" to="/">home</g-link>
+      <g-link class="link" @click="close" to="/work-and-play/"
+        >work & play
+      </g-link>
+      <g-link class="link" @click="close" to="/about/">sobre</g-link>
+      <g-link class="link" to="/blog/">blog</g-link>
+    </nav>
+    <div class="contact">
+      <a
+        target="_blank"
+        href="https://github.com/lincolixavier"
+        class="contact-icon is-github"
+      ></a>
+      <a
+        target="_blank"
+        href="https://twitter.com/lincolixavier"
+        class="contact-icon is-twitter"
+      ></a>
+      <a
+        target="_blank"
+        href="https://www.linkedin.com/in/lincoli-xavier/"
+        class="contact-icon is-linkedin"
+      ></a>
+      <a
+        target="_blank"
+        href="https://www.instagram.com/lincolimonteiro/"
+        class="contact-icon is-instagram"
+      ></a>
+      <a
+        target="_blank"
+        href="https://www.behance.net/lincolixavier1"
+        class="contact-icon is-behance"
+      ></a>
+      <a
+        target="_blank"
+        href="https://www.shutterstock.com/g/lincolimonteiro"
+        class="contact-icon is-shutterstock"
+      ></a>
     </div>
+  </div>
 </template>
 
-<script >
+<script>
 export default {
-  name: 'Menu',
+  name: "Menu",
   props: {
     show: false,
   },
   methods: {
     close() {
-      this.$emit('close', this.show);
-    }
+      this.$emit("close", this.show);
+    },
   },
   created() {
     const onEscape = (e) => {
       if (this.show && e.keyCode === 27) {
-        this.close()
+        this.close();
       }
-    }
+    };
     if (process.isClient) {
-      document.addEventListener('keydown', onEscape)
-      this.$once('hook:destroyed', () => {
-        document.removeEventListener('keydown', onEscape)
+      document.addEventListener("keydown", onEscape);
+      this.$once("hook:destroyed", () => {
+        document.removeEventListener("keydown", onEscape);
       });
     }
   },
-  
-}
+};
 </script>
 
 <style lang="scss">
-.container-menu{
+.container-menu {
   position: fixed;
   height: 95%;
   width: 95%;
@@ -68,36 +93,37 @@ export default {
   visibility: hidden;
   z-index: -1;
   transition: all 0.2s ease-in-out;
- 
-  &.open{
+
+  &.open {
     transform: scale(1);
     opacity: 1;
     visibility: visible;
     z-index: 99;
   }
 }
-.close-menu{
-    width: 40px;
-    height: 22px;
+.close-menu {
+  width: 40px;
+  height: 22px;
+  position: absolute;
+  left: 37px;
+  top: 39px;
+  cursor: pointer;
+  &:after,
+  &:before {
+    content: "";
     position: absolute;
-    left: 37px;
-    top: 39px;
-    cursor: pointer;
-    &:after, &:before{
-      content: '';
-      position: absolute;
-      left: 0;
-      background: #FFF;
-      height: 4px;
-      width: 100%;
-      transform-origin: center;
-      transform: rotate(45deg);
-    }
-    &:before{
-      transform: rotate(-45deg);
-    }
+    left: 0;
+    background: #fff;
+    height: 4px;
+    width: 100%;
+    transform-origin: center;
+    transform: rotate(45deg);
+  }
+  &:before {
+    transform: rotate(-45deg);
+  }
 }
-.nav-menu{
+.nav-menu {
   height: 73%;
   width: 100%;
   column-count: 1;
@@ -105,76 +131,75 @@ export default {
   display: inline-flex;
   flex-wrap: wrap;
   align-content: center;
-  .link{
+  .link {
     cursor: pointer;
   }
-  a{
+  a {
     font-size: 76px;
     font-weight: 300;
-    color: #FFF; 
-    position: relative; 
+    color: #fff;
+    position: relative;
     display: block;
     width: fit-content;
     text-align: center;
     margin: auto;
     text-decoration: none;
     cursor: pointer;
-    &:hover:before{
+    &:hover:before {
       width: 117%;
     }
-    &:before{
-      content: '';
+    &:before {
+      content: "";
       position: absolute;
       height: 15px;
       width: 0;
-      background: #AF0A0A;
+      background: #af0a0a;
       opacity: 0.39;
       top: 50%;
       left: -9%;
       z-index: -1;
       transition: all 0.2s ease-in-out;
-
     }
   }
 }
-.contact{
-  border-top:1px solid #FFF;
+.contact {
+  border-top: 1px solid #fff;
   padding: 20px 0;
   display: flex;
   width: 90%;
   max-width: 530px;
   margin: auto;
   justify-content: center;
-  .contact-icon{
+  .contact-icon {
     width: 60px;
     height: 57px;
     display: block;
     margin: 0 5px;
     background: url(../assets/sprite_social.svg) no-repeat;
-    &.is-github{
+    &.is-github {
       background-position: 0 0;
     }
-    &.is-twitter{
+    &.is-twitter {
       background-position: -68px 0;
     }
-    &.is-linkedin{
+    &.is-linkedin {
       background-position: -135px 0;
     }
-    &.is-instagram{
+    &.is-instagram {
       background-position: -201px 0;
     }
-    &.is-behance{
+    &.is-behance {
       background-position: -266px 0;
     }
-    &.is-shutterstock{
+    &.is-shutterstock {
       background-position: -330px 0;
     }
-    &.is-whatsapp{
+    &.is-whatsapp {
       background-position: -396px 0;
-    } 
+    }
   }
 }
-@media screen and (max-width: 950px){
+@media screen and (max-width: 950px) {
   .nav-menu a {
     font-size: 47px;
   }
@@ -185,7 +210,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 550px) {
   .close-menu {
     width: 27px;
     left: 13px;
@@ -197,7 +222,7 @@ export default {
   .nav-menu a {
     font-size: 35px;
   }
-  .contact  {
+  .contact {
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -205,5 +230,4 @@ export default {
     transform: scale(0.6);
   }
 }
-
 </style>

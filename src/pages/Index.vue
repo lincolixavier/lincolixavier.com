@@ -1,137 +1,127 @@
 <template>
   <div class="container">
-    <Header @keydown.esc="closeEsc" :isHome="true" ></Header>
+    <Header @keydown.esc="closeEsc" :isHome="true"></Header>
     <div class="rwd">
-      <img src="../assets/rwd.png" alt="Code Design Side" lazyload="true">
+      <img src="../assets/rwd.png" alt="Code Design Side" lazyload="true" />
     </div>
-    <div @mousemove="mouseEnter"  @mouseleave="mouseLeave"  class="skillset-presentation">
-      <div class="skillset-art">        
+    <div
+      @mousemove="mouseEnter"
+      @mouseleave="mouseLeave"
+      class="skillset-presentation"
+    >
+      <div class="skillset-art">
         <div class="skillset-side skillset-code-side">
-          <img src="../assets/codeart.png" alt="Code Side" lazyload="true">
-          <input class="text-code"  value="<logic /> 👨🏻‍💻" type="text" disabled>
+          <img src="../assets/codeart.png" alt="Code Side" lazyload="true" />
+          <input class="text-code" value="<logic /> 👨🏻‍💻" type="text" disabled />
         </div>
 
         <div class="laptop laptop-coder"></div>
 
-        <div class="laptop laptop-designer">
-        </div>
+        <div class="laptop laptop-designer"></div>
 
         <div class="skillset-side skillset-design-side">
-          <img src="../assets/designerart.png" alt="Design Side" lazyload="true">
-          <h1 class="text-art">art 👨🏻‍🎨</h1> 
+          <img
+            src="../assets/designerart.png"
+            alt="Design Side"
+            lazyload="true"
+          />
+          <h1 class="text-art">art 👨🏻‍🎨</h1>
         </div>
       </div>
     </div>
     <div class="button-toportfolio">
-      <g-link  class="arrow" to="/work-and-play/">Veja meu trabalho</g-link>
+      <g-link class="arrow" to="/work-and-play/">Veja meu trabalho</g-link>
     </div>
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-
 export default {
   metaInfo: {
-    title: 'Lincoli Xavier | Frontend Developer & UI Designer'
+    title: "Lincoli Xavier | Frontend Developer & UI Designer",
   },
-  data(){
-    return{
-      designX:'',
-      boxRight: '',
-      hover: false,
-      transition: false,
-      relMouseX: 640,
-      xp: 640,
-      documents: null,
-    };
-  },
-  methods:{
+  methods: {
     closeEsc() {
-      console.log('this.show');
+      console.log("this.show");
     },
-    mouseLeave(){
-      let laptopCoder = document.querySelector('.laptop-coder');
-      let laptopDesigner = document.querySelector('.laptop-designer');
-      let artCode = document.querySelector('.skillset-code-side');
-      let artDesign = document.querySelector('.skillset-design-side');
-      artCode.className = 'skillset-side skillset-code-side';
-      artDesign.className = 'skillset-side skillset-design-side';
-      laptopDesigner.className = 'laptop laptop-designer';
-      laptopCoder.className = 'laptop laptop-coder';
+    mouseLeave() {
+      let laptopCoder = document.querySelector(".laptop-coder");
+      let laptopDesigner = document.querySelector(".laptop-designer");
+      let artCode = document.querySelector(".skillset-code-side");
+      let artDesign = document.querySelector(".skillset-design-side");
+      artCode.className = "skillset-side skillset-code-side";
+      artDesign.className = "skillset-side skillset-design-side";
+      laptopDesigner.className = "laptop laptop-designer";
+      laptopCoder.className = "laptop laptop-coder";
     },
-    mouseEnter(event){
+    mouseEnter(event) {
       let mouseX = event.clientX;
-      let laptopCoder = document.querySelector('.laptop-coder');
-      let laptopDesigner = document.querySelector('.laptop-designer');
+      let laptopCoder = document.querySelector(".laptop-coder");
+      let laptopDesigner = document.querySelector(".laptop-designer");
 
-      let artCode = document.querySelector('.skillset-code-side');
-      let artDesign = document.querySelector('.skillset-design-side');
-
+      let artCode = document.querySelector(".skillset-code-side");
+      let artDesign = document.querySelector(".skillset-design-side");
 
       let sizeWidthHalf = window.innerWidth / 2;
-      if(mouseX < this.currentX && this.currentX < sizeWidthHalf  ){
+      if (mouseX < this.currentX && this.currentX < sizeWidthHalf) {
+        laptopDesigner.classList.remove("open");
+        laptopCoder.classList.add("open");
+        laptopCoder.classList.remove("close");
+        laptopDesigner.classList.add("close");
 
-        laptopDesigner.classList.remove('open');
-        laptopCoder.classList.add('open');
-        laptopCoder.classList.remove('close');
-        laptopDesigner.classList.add('close');
+        artCode.classList.remove("close");
+        artCode.classList.add("open");
 
-        artCode.classList.remove('close');
-        artCode.classList.add('open');
-        
-        artDesign.classList.remove('open');
-        artDesign.classList.add('close');
+        artDesign.classList.remove("open");
+        artDesign.classList.add("close");
+      } else if (mouseX > this.currentX && this.currentX > sizeWidthHalf) {
+        laptopDesigner.classList.add("open");
+        laptopCoder.classList.add("close");
+        laptopCoder.classList.remove("open");
+        laptopDesigner.classList.remove("close");
 
-      } else if(mouseX > this.currentX && this.currentX > sizeWidthHalf ) {
-        laptopDesigner.classList.add('open');
-        laptopCoder.classList.add('close');
-        laptopCoder.classList.remove('open');
-        laptopDesigner.classList.remove('close');
+        artCode.classList.add("close");
+        artCode.classList.remove("open");
 
-        artCode.classList.add('close');
-        artCode.classList.remove('open');
-
-        artDesign.classList.remove('close');
-        artDesign.classList.add('open');
+        artDesign.classList.remove("close");
+        artDesign.classList.add("open");
       }
       this.currentX = mouseX;
     },
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss">
-
-.skillset-presentation{
+.skillset-presentation {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-.skillset-art{
-  width: 640px;  
+.skillset-art {
+  width: 640px;
   margin: auto;
   position: relative;
   height: 439px;
-  .skillset-side{
+  .skillset-side {
     width: 50%;
   }
 }
-.skillset-code-side{
+.skillset-code-side {
   left: -57px;
   z-index: 9;
   position: absolute;
   transition: all 1s ease-in-out;
   opacity: 0.4;
-  &.open{
+  &.open {
     left: -32px;
     opacity: 1;
   }
-  &.close{
+  &.close {
     left: -62px;
     opacity: 0;
   }
-  .text-code{
+  .text-code {
     font-size: 40px;
     color: #2b2b2b;
     position: absolute;
@@ -142,120 +132,118 @@ export default {
     width: 227px;
   }
 }
-.skillset-design-side{
+.skillset-design-side {
   right: -67px;
   position: absolute;
   transition: all 0.9s ease-in-out;
   opacity: 0.4;
-  &.open{
+  &.open {
     right: -32px;
     opacity: 1;
   }
-  &.close{
+  &.close {
     right: -62px;
     opacity: 0;
   }
-  .text-art{
+  .text-art {
     font-size: 40px;
-    color: #FF5858;
+    color: #ff5858;
     position: absolute;
     top: 50%;
     right: -67%;
     width: 119px;
   }
 }
-.laptop{
+.laptop {
   transition: all 0.9s ease-in-out;
-  background: url('../assets/notebooks.png') no-repeat;
-  width: 285px;  
+  background: url("../assets/notebooks.png") no-repeat;
+  width: 285px;
   height: 394px;
   position: absolute;
   top: 0;
   display: block;
   z-index: 9;
-  &.laptop-designer{
+  &.laptop-designer {
     background-position: 100% 0;
     right: 40px;
-    &.open{
+    &.open {
       right: 150px;
       width: 562px;
     }
-    &.close{
+    &.close {
       right: -63px;
       width: 0px;
     }
   }
 
-  &.laptop-coder{
+  &.laptop-coder {
     background-position: 0 100%;
-    left:40px;
-    &.open{
+    left: 40px;
+    &.open {
       left: 143px;
       width: 562px;
-
     }
-    &.close{
+    &.close {
       left: -70px;
     }
   }
 }
 
-.button-toportfolio{
-    width: 100%;
-    a{
-      color: #FF5858;
-      width: 250px;
-      display: block;
-      margin: auto;
-      font-size: 22px;
-      padding: 10px;
-      border-radius: 4px;
-      text-decoration: none;
-      position: relative;
-      overflow: hidden;
+.button-toportfolio {
+  width: 100%;
+  a {
+    color: #ff5858;
+    width: 250px;
+    display: block;
+    margin: auto;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    &:hover:after {
+      width: 100%;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      background: #ff5858;
       transition: all 0.2s ease-in-out;
-      &:hover:after{
-        width: 100%;
-      }
-      &:after{
-        content: '';
-        position: absolute;
-        left: 0px;
-        bottom: 0;
-        height: 2px;
-        width: 0;
-        background: #FF5858;
-        transition: all 0.2s ease-in-out;
-
-      }
-      &:hover:before{
-        right: 2px;
-      }
-      &:before{
-        content: '';
-        position: absolute;
-        height: 100%;
-        top: 0;
-        right: 6px;
-        z-index: 2;
-        width: 40px;
-        background: url('../assets/arrow.svg') no-repeat;
-        background-position: center;
-        transition: all 0.25s ease-in-out;
-      }
+    }
+    &:hover:before {
+      right: 2px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      top: 0;
+      right: 6px;
+      z-index: 2;
+      width: 40px;
+      background: url("../assets/arrow.svg") no-repeat;
+      background-position: center;
+      transition: all 0.25s ease-in-out;
     }
   }
-  .rwd{
-    display: none;
-  }
+}
+.rwd {
+  display: none;
+}
 
-@media screen and (max-width: 1220px){
+@media screen and (max-width: 1220px) {
   .skillset-presentation {
     transform: scale(0.75);
   }
 }
 
-@media screen and (max-width: 950px){
+@media screen and (max-width: 950px) {
   .skillset-presentation {
     margin-top: -60px;
   }
@@ -269,32 +257,33 @@ export default {
   }
 }
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 720px) {
   .skillset-presentation {
     display: none;
   }
-  .skillset-code-side .text-code,.skillset-design-side .text-art  {
+  .skillset-code-side .text-code,
+  .skillset-design-side .text-art {
     display: none;
   }
   .rwd {
     padding: 30px;
     display: block;
     text-align: center;
-    img{
+    img {
       max-width: 100%;
     }
   }
 }
 
-@media screen and (max-width: 450px){
-  .container{
+@media screen and (max-width: 450px) {
+  .container {
     overflow: hidden;
   }
   .rwd {
     padding: 0px;
     display: flex;
     justify-content: center;
-    img{
+    img {
       max-width: 134%;
       margin: auto;
     }
@@ -303,5 +292,4 @@ export default {
     margin: 30px 0;
   }
 }
-
 </style>
