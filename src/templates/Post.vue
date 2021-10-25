@@ -68,22 +68,24 @@ export default {
 }
 
 .post-content {
+  color: #545454;
   h2,
   h3,
   h5,
   h6 {
-    color: #545454;
+    color: currentColor;
     margin: 30px 0 10px;
   }
   h4 {
-    color: #545454;
+    color: currentColor;
     margin: 40px 0 20px;
   }
   p {
-    color: #545454;
+    color: currentColor;
     font-size: 19px;
     margin-bottom: 15px;
     line-height: 29px;
+    font-family: Lato;
   }
   a {
     background: #ff6b00;
@@ -100,11 +102,10 @@ export default {
     background: #f7f7f7;
     padding: 8px;
     margin: 0;
-    font-style: italic;
     border-left: 5px solid #ff6b00;
     p {
       margin: 0;
-      font-size: 16px;
+      font-size: 17px;
     }
   }
 }

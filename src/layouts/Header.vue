@@ -1,13 +1,28 @@
 <template>
-  <header class="header" :class="{ 'is-home': isHome !== true }">
-    <div @click="showMenu = true" class="header-menu"></div>
-    <Menu :show="showMenu" @close="showMenu = false" style="position: fixed" />
+  <header class="header" :class="{ 'is-home': isHome }">
     <g-link class="header-logo" to="/">
       <Logo />
     </g-link>
-    <a href="mailto:hello@lincolixavier.com" class="header-mailme">
+    <div class="mobile-menu">
+      <div @click="showMenu = true" class="header-menu"></div>
+      <Menu
+        :show="showMenu"
+        @close="showMenu = false"
+        style="position: fixed"
+      />
+    </div>
+
+    <nav class="main-menu">
+      <g-link class="link" @click="close" to="/">home</g-link>
+      <g-link class="link" @click="close" to="/work-and-play/"
+        >work & play
+      </g-link>
+      <g-link class="link" @click="close" to="/about/">sobre</g-link>
+      <g-link class="link" to="/blog/">blog</g-link>
+    </nav>
+    <!-- <a href="mailto:hello@lincolixavier.com" class="header-mailme">
       <img src="../assets/mail.svg" alt="Email Me" />
-    </a>
+    </a> -->
   </header>
 </template>
 
@@ -42,7 +57,19 @@ query {
 .header {
   display: flex;
   padding: 40px;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  .main-menu {
+    width: 100%;
+    text-align: center;
+    margin: 33px 0 26px;
+    a {
+      text-decoration: none;
+      font-size: 18px;
+      margin: 30px;
+      color: #6e6e6e;
+    }
+  }
   .header-menu {
     width: 40px;
     height: 22px;
@@ -69,11 +96,15 @@ query {
 }
 .is-home {
   .header-logo {
-    width: 263px;
+    width: 100%;
+    text-align: center;
     svg {
       width: 100%;
     }
   }
+}
+.mobile-menu {
+  display: none;
 }
 
 @media screen and (max-width: 1220px) {
@@ -88,6 +119,20 @@ query {
     width: 229px;
     top: -41px;
     position: relative;
+  }
+}
+
+@media screen and(max-width:1024px) {
+  .header .mobile-menu {
+    display: block;
+    position: absolute;
+    left: 28px;
+  }
+  .header .main-menu {
+    display: none;
+  }
+  .is-home .header-logo svg {
+    width: 252px;
   }
 }
 

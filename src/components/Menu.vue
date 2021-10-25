@@ -2,11 +2,9 @@
   <div :class="{ open: show }" class="container-menu">
     <div @click="close" class="close-menu"></div>
     <nav class="nav-menu">
-      <g-link class="link" @click="close" to="/">home</g-link>
-      <g-link class="link" @click="close" to="/work-and-play/"
-        >work & play
-      </g-link>
-      <g-link class="link" @click="close" to="/about/">sobre</g-link>
+      <g-link class="link" to="/">home</g-link>
+      <g-link class="link" to="/work-and-play/">work & play </g-link>
+      <g-link class="link" to="/about/">sobre</g-link>
       <g-link class="link" to="/blog/">blog</g-link>
     </nav>
     <div class="contact">
