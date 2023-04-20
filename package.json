@@ -17,6 +17,6 @@
   "devDependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
     "sass": "1.49.9",
-    "sass-loader": "12.6.0"
+    "sass-loader": "^10"
   }
 }
