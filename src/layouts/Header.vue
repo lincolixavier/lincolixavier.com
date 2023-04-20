@@ -18,14 +18,14 @@
 
     <div class="languages">
       <button
-        :class="{ active: $context.locale === 'pt' }"
+        :class="{ active: currentLocale === 'pt' }"
         class="toggle-language"
         @click="localeChanged('pt')"
       >
         🇧🇷
       </button>
       <button
-        :class="{ active: $context.locale === 'en' }"
+        :class="{ active: currentLocale === 'en' }"
         class="toggle-language"
         @click="localeChanged('en')"
       >
@@ -44,7 +44,7 @@ export default {
   data() {
     return {
       showMenu: false,
-      currentLocale: this.$$i18n.locale.toString(),
+      currentLocale: this.$i18n.locale.toString(),
       availableLocales: this.$i18n.availableLocales,
     };
   },

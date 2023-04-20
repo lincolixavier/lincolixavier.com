@@ -11,7 +11,8 @@
     "gridsome": "^0.7.0",
     "gridsome-plugin-i18n": "^1.6.0",
     "gridsome-plugin-remark-prismjs-all": "^0.4.8",
-    "vue-disqus": "^4.0.1"
+    "vue-disqus": "^4.0.1",
+    "webpack": "^4.46.0"
   },
   "devDependencies": {
     "@gridsome/source-filesystem": "^0.6.2",
