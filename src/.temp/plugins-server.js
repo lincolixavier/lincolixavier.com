@@ -1,8 +1,8 @@
-import plugin_gridsome_plugin_google_analytics_5 from "/Users/lincolixavier/Projects/lincolixavier/lincolixavier.com/node_modules/@gridsome/plugin-google-analytics/gridsome.client.js"
+import plugin_gridsome_plugin_i_18_n_7 from "/Users/lincolixavier/Projects/lincolixavier/lincolixavier.com/node_modules/gridsome-plugin-i18n/gridsome.client.js"
 
 export default [
   {
-    run: plugin_gridsome_plugin_google_analytics_5,
-    options: {"id":"UA-159332315-1"}
+    run: plugin_gridsome_plugin_i_18_n_7,
+    options: {"locales":["pt","en"],"pathAliases":{"pt":"pt","en":"en"},"defaultLocale":"pt","enablePathRewrite":true,"rewriteDefaultLanguage":true,"messages":{"pt":{"titlePageAbout":"sobre mim","aboutMe":"Olá! Meu nome é Lincoli, tenho {age} anos, baiano de Camaçari, há {xp} anos eu desenho e programo interfaces pra Web e Mobile, às vezes indo para o backend e sou apaixonado pelo que faço, assim, entregar o máximo de valor possível as pessoas minha volta.\n\nEu sou muito animado \\o/, naturalmente curioso, mochileiro e nômade digital que não para quieto e nem de buscar o melhor como pessoa e profissional. Quando não estou desenhando algo ou programando eu passo o tempo fotografando, tocando violão, lendo livros, mangás, quadrinhos... ou planejando a próxima viagem e aventura =)","likeTodo":"O que eu gosto de fazer:","daily":"Dia-Dia","inTo":"Interesse/Estudos","workAndPlay":{"viewProject":"Veja o projeto"}},"en":{"titlePageAbout":"about","aboutMe":"Hello! My name is Lincoli, I'm {age} years old, from Camaçari, Bahia, for {xp} years I've been designing and programming interfaces for Web and Mobile, sometimes going to the backend and I'm passionate about what I do, thus delivering maximum value possible the people around me. I am very excited \\o/, naturally curious, backpacker and digital nomad who never stops looking for the best as a person and professional. When I'm not drawing something or programming I spend my time photographing, playing the guitar, reading books, manga, comics... or planning the next trip and adventure =)","likeTodo":"What I like to do:","daily":"Tooling","inTo":"What I'm into","workAndPlay":{"viewProject":"View the project"}}},"enablePathGeneration":true,"routes":{}}
   }
 ]

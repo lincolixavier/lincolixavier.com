@@ -1,0 +1,13 @@
+{
+  "titlePageAbout": "sobre mim",
+  "aboutMe": "Olá! Meu nome é Lincoli, tenho {age} anos, baiano de Camaçari, há {xp} anos eu desenho e programo interfaces pra Web e Mobile, às vezes indo para o backend e sou apaixonado pelo que faço, assim, entregar o máximo de valor possível as pessoas minha volta.\n\nEu sou muito animado \\o/, naturalmente curioso, mochileiro e nômade digital que não para quieto e nem de buscar o melhor como pessoa e profissional. Quando não estou desenhando algo ou programando eu passo o tempo fotografando, tocando violão, lendo livros, mangás, quadrinhos... ou planejando a próxima viagem e aventura =)",
+  "likeTodo": "O que eu gosto de fazer:",
+  "daily": "Dia-Dia",
+  "inTo": "Interesse/Estudos",
+  "workAndPlay":{
+    "viewProject":"Veja o projeto"
+  },
+  "seeMyWork": "Veja meu trabalho",
+  "letsTalk": "Vamos conversar"
+
+}

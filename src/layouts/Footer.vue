@@ -1,6 +1,6 @@
 <template>
   <section class="contact-me">
-    <h1 class="title-section">Vamos conversar 🤝🏽</h1>
+    <h1 class="title-section">{{ $t("letsTalk") }} 🤝🏽</h1>
     <div class="contact-socialmedia">
       <a
         target="_blank"

@@ -80,11 +80,14 @@ export default {
     color: currentColor;
     margin: 40px 0 20px;
   }
+  em {
+    font-size: 24px;
+  }
   p {
     color: currentColor;
-    font-size: 19px;
+    font-size: 22px;
     margin-bottom: 15px;
-    line-height: 29px;
+    line-height: 39px;
     font-family: Lato;
   }
   a {

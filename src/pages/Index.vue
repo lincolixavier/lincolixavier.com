@@ -30,7 +30,9 @@
       </div>
     </div>
     <div class="button-toportfolio">
-      <g-link class="arrow" to="/work-and-play/">Veja meu trabalho</g-link>
+      <g-link class="arrow" to="/work-and-play/">
+        {{ $t("seeMyWork") }}
+      </g-link>
     </div>
   </div>
 </template>

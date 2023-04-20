@@ -1,6 +1,7 @@
 <template>
   <Layout>
-    <div class="title-page title-about">sobre mim</div>
+    <div class="title-page title-about">{{ $t("titlePageAbout") }}</div>
+
     <section class="about-me">
       <img
         class="profile-img"
@@ -9,50 +10,33 @@
       />
       <div class="personal-description">
         <p>
-          Olá! Meu nome é Lincoli, tenho {{ currentYear - BIRTH_YEAR }} anos,
-          baiano de Camaçari, há {{ currentYear - FIRST_YEAR_OF_WORK }} anos eu
-          desenho e programo interfaces pra Web e Mobile, às vezes indo para o
-          backend e sou apaixonado pelo que faço, assim, entregar o máximo de
-          valor possível as pessoas minha volta.
-        </p>
-        <p>
-          Eu sou muito animado \o/, naturalmente curioso, mochileiro e nômade
-          digital que não para quieto e nem de buscar o melhor como pessoa e
-          profissional.
-        </p>
-        <p>
-          Quando não estou desenhando algo ou programando eu passo o tempo
-          fotografando, tocando violão, lendo livros, mangás, quadrinhos... ou
-          planejando a próxima viagem e aventura =)
+          {{ $t("aboutMe") }}
         </p>
       </div>
     </section>
 
     <section class="skills">
-      <h1 class="title-section">O que eu gosto de fazer:</h1>
+      <h1 class="title-section">{{ $t("likeTodo") }}</h1>
       <div class="skills-set">
         <h3 class="topic">UI/UX</h3>
         <ul class="skills-list">
           <li class="skill-item">Gestalt</li>
-          <li class="skill-item">Heurísticas de Nielsen</li>
+          <li class="skill-item">Nielsen's Heuristics</li>
           <li class="skill-item">Photoshop</li>
           <li class="skill-item">Illustrator</li>
           <li class="skill-item">Adobe XD</li>
         </ul>
       </div>
       <div class="skills-set">
-        <h3 class="topic">Front-end</h3>
+        <h3 class="topic">Frontend</h3>
         <ul class="skills-list">
           <li class="skill-item">HTML</li>
           <li class="skill-item">CSS</li>
-          <li class="skill-item">Javascript</li>
-          <li class="skill-item">Typescript</li>
-          <li class="skill-item">Angular, NGXS</li>
-          <li class="skill-item">Vue, Vuex, Gridsome - Esse site =)</li>
+          <li class="skill-item">JS/TS</li>
+          <li class="skill-item">Angular</li>
+          <li class="skill-item">Vue, Vuex Pinia, Gridsome</li>
           <li class="skill-item">React, GatsbyJs</li>
           <li class="skill-item">React Native + Expo</li>
-          <li class="skill-item">Jest</li>
-          <li class="skill-item">Cypress</li>
         </ul>
       </div>
       <div class="skills-set">
@@ -62,34 +46,33 @@
           <li class="skill-item">NodeJS</li>
           <li class="skill-item">Wordpress</li>
           <li class="skill-item">Woocommerce</li>
+
           <li class="skill-item">Strapi</li>
           <li class="skill-item">MongoDB</li>
           <li class="skill-item">Firebase</li>
         </ul>
       </div>
       <div class="skills-set">
-        <h3 class="topic">Dia-Dia</h3>
+        <h3 class="topic">{{ $t("daily") }}</h3>
         <ul class="skills-list">
           <li class="skill-item">Terminal</li>
           <li class="skill-item">Git</li>
+          <li class="skill-item">Jest</li>
+          <li class="skill-item">Cypress</li>
           <li class="skill-item">eXtreme Programming</li>
-          <li class="skill-item">Manifesto Ágil</li>
-          <li class="skill-item">Arquitetura</li>
-          <li class="skill-item">Netlify, Heroku</li>
-          <li class="skill-item">Toggl</li>
+          <li class="skill-item">Netlify</li>
           <li class="skill-item">Wakatime</li>
           <li class="skill-item">Discord, Slack</li>
-          <li class="skill-item">Spotify 🎶</li>
-          <li class="skill-item">Café ☕</li>
+          <li class="skill-item">Spotify 🎶 & Café ☕</li>
         </ul>
       </div>
       <div class="skills-set">
-        <h3 class="topic">Interesse/Estudos</h3>
+        <h3 class="topic">{{ $t("inTo") }}</h3>
         <ul class="skills-list">
-          <li class="skill-item">C++</li>
+          <li class="skill-item">Rust</li>
           <li class="skill-item">Elixir</li>
-          <li class="skill-item">Haskell</li>
-          <li class="skill-item">Blockchain/Smart Contracts</li>
+          <li class="skill-item">Agda</li>
+          <li class="skill-item">Proof theory</li>
           <li class="skill-item">Design Thinking</li>
           <li class="skill-item">UX Research</li>
         </ul>
@@ -107,6 +90,8 @@ export default {
     return {
       BIRTH_YEAR: 1993,
       FIRST_YEAR_OF_WORK: 2012,
+      age: this.currentYear - this.BIRTH_YEAR,
+      xp: this.currentYear - this.FIRST_YEAR_OF_WORK,
     };
   },
   computed: {

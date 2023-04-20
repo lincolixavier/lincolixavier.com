@@ -1,7 +1,6 @@
 <template>
   <Layout>
     <div class="title-page title-work">work & play</div>
-
     <section class="section-workplay">
       <Job
         class="post-container"
@@ -18,7 +17,6 @@
     edges {
       node {
         title
-        description
         tags
         linkToProject	
         colorTheme

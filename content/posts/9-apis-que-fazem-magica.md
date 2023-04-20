@@ -1,6 +1,7 @@
 ---
 title: "9 Web API's que fazem mágica ⚡🧙🏻‍♀️🧙🏾‍♂️✨"
 description: "O poder do browser como nunca antes. Web api's assemble! "
+slug: '9-apis-que-fazem-magica'
 date: 2021-01-15
 ---
 ### *Se voltássemos no tempo uns 20 anos, ou até menos, e falassemos pros devs daquela época o que os navegadores conseguem fazer hoje, definitivamente não acreditariam. Olhando em perspectiva o que os browsers fazem hoje com certeza garantiriam a entrada do Chrome, Firefox, Edge e outros em Hogwarts. Sabemos também quem ficaria de fora 👀 (aqueles que não devem ser mencionados ~~IE/Safari~~)*

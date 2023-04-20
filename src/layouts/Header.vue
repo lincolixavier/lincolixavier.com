@@ -5,42 +5,57 @@
     </g-link>
     <div class="mobile-menu">
       <div @click="showMenu = true" class="header-menu"></div>
-      <Menu
-        :show="showMenu"
-        @close="showMenu = false"
-        style="position: fixed"
-      />
     </div>
 
     <nav class="main-menu">
       <g-link class="link" @click="close" to="/">home</g-link>
-      <g-link class="link" @click="close" to="/work-and-play/"
+      <g-link class="link" @click="close" :to="`/work-and-play/`"
         >work & play
       </g-link>
-      <g-link class="link" @click="close" to="/about/">sobre</g-link>
+      <g-link class="link" @click="close" :to="`/about/`">about</g-link>
       <g-link class="link" to="/blog/">blog</g-link>
     </nav>
-    <!-- <a href="mailto:hello@lincolixavier.com" class="header-mailme">
-      <img src="../assets/mail.svg" alt="Email Me" />
-    </a> -->
+
+    <div class="languages">
+      <button
+        :class="{ active: $context.locale === 'pt' }"
+        class="toggle-language"
+        @click="localeChanged('pt')"
+      >
+        🇧🇷
+      </button>
+      <button
+        :class="{ active: $context.locale === 'en' }"
+        class="toggle-language"
+        @click="localeChanged('en')"
+      >
+        🇺🇸
+      </button>
+    </div>
   </header>
 </template>
 
 <script>
-import Menu from "@/components/Menu.vue";
-
 export default {
   name: "Header",
-  components: {
-    Menu,
-  },
   props: {
     isHome: false,
   },
   data() {
     return {
       showMenu: false,
+      currentLocale: this.$$i18n.locale.toString(),
+      availableLocales: this.$i18n.availableLocales,
     };
+  },
+
+  methods: {
+    localeChanged(language) {
+      this.currentLocale = language;
+      this.$router.push({
+        path: this.$tp(this.$route.path, this.currentLocale, true),
+      });
+    },
   },
 };
 </script>
@@ -59,6 +74,24 @@ query {
   padding: 40px;
   justify-content: center;
   flex-wrap: wrap;
+  .languages {
+    position: absolute;
+    top: 7px;
+    right: 20px;
+    .toggle-language {
+      border: none;
+      background: transparent;
+      font-size: 25px;
+      margin: 0 3px;
+      cursor: pointer;
+      width: 36px;
+
+      &.active {
+        border: 1px solid #f27575;
+        border-radius: 50%;
+      }
+    }
+  }
   .main-menu {
     width: 100%;
     text-align: center;
@@ -122,7 +155,7 @@ query {
   }
 }
 
-@media screen and(max-width:1024px) {
+@media screen and (max-width: 1024px) {
   .header .mobile-menu {
     display: block;
     position: absolute;
