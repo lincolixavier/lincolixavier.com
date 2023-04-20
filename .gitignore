@@ -33,6 +33,7 @@ bower_components
 build/Release
 
 # Dependency directories
+dist/
 node_modules/
 jspm_packages/
 
@@ -60,3 +61,5 @@ src/.temp
 
 # next.js build output
 .next
+
+
