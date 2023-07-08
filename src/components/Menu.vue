@@ -1,6 +1,6 @@
 <template>
   <div :class="{ open: show }" class="container-menu">
-    <div @click="close" class="close-menu"></div>
+    <div @click="closeMenu" class="close-menu"></div>
     <nav class="nav-menu">
       <g-link class="link" to="/">home</g-link>
       <g-link class="link" to="/work-and-play/">work & play </g-link>
@@ -49,8 +49,8 @@ export default {
     show: false,
   },
   methods: {
-    close() {
-      this.$emit("close", this.show);
+    closeMenu() {
+      this.$emit("closeMenu", this.show);
     },
   },
   created() {

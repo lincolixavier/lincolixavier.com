@@ -5,14 +5,12 @@
     </g-link>
     <div class="mobile-menu">
       <div @click="showMenu = true" class="header-menu"></div>
+      <Menu :show="showMenu" @closeMenu="toggle" style="position: fixed" />
     </div>
-
     <nav class="main-menu">
-      <g-link class="link" @click="close" to="/">home</g-link>
-      <g-link class="link" @click="close" :to="`/work-and-play/`"
-        >work & play
-      </g-link>
-      <g-link class="link" @click="close" :to="`/about/`">about</g-link>
+      <g-link class="link" to="/">home</g-link>
+      <g-link class="link" :to="`/work-and-play/`">work & play </g-link>
+      <g-link class="link" :to="`/about/`">about</g-link>
       <g-link class="link" to="/blog/">blog</g-link>
     </nav>
 
@@ -36,10 +34,15 @@
 </template>
 
 <script>
+import Menu from "@/components/Menu.vue";
+
 export default {
   name: "Header",
   props: {
     isHome: false,
+  },
+  components: {
+    Menu,
   },
   data() {
     return {
@@ -50,6 +53,9 @@ export default {
   },
 
   methods: {
+    toggle() {
+      this.showMenu = !this.showMenu;
+    },
     localeChanged(language) {
       this.currentLocale = language;
       this.$router.push({
