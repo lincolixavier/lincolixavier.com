@@ -30,23 +30,6 @@ module.exports = {
           path: 'content/jobs/*.md'
       }
     },
-    {
-      use: "gridsome-plugin-i18n",
-      options: {
-        locales: ['pt','en'],
-        pathAliases: { 
-          'pt': 'pt',
-          'en': 'en',
-        },
-        defaultLocale: 'pt',
-        enablePathRewrite: true, // rewrite path with locale prefix, default: true
-        rewriteDefaultLanguage: true, // rewrite default locale, default: true
-        messages: {
-          'pt': require('./src/locales/pt-br.json'), 
-          'en': require('./src/locales/en-us.json'),
-        }
-      }
-    }
   ],
   transformers: {
     //Add markdown support to all file-system sources

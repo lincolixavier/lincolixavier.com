@@ -31,7 +31,7 @@
     </div>
     <div class="button-toportfolio">
       <g-link class="arrow" to="/work-and-play/">
-        {{ $t("seeMyWork") }}
+        My projects
       </g-link>
     </div>
   </div>

@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="title-page title-about">{{ $t("titlePageAbout") }}</div>
+    <div class="title-page title-about">about</div>
 
     <section class="about-me">
       <img
@@ -10,13 +10,21 @@
       />
       <div class="personal-description">
         <p>
-          {{ $t("aboutMe") }}
+          Hello! My name is Lincoli, I'm 30 years old, from Camaçari, Bahia, for
+          11 years I've been designing and programming interfaces for Web and
+          Mobile, sometimes going to the backend and I'm passionate about what I
+          do, thus delivering maximum value possible the people around me. I am
+          very excited \o/, naturally curious, backpacker and digital nomad who
+          never stops looking for the best as a person and professional. When
+          I'm not drawing something or programming I spend my time
+          photographing, playing the guitar, reading books, manga, comics... or
+          planning the next trip and adventure =)
         </p>
       </div>
     </section>
 
     <section class="skills">
-      <h1 class="title-section">{{ $t("likeTodo") }}</h1>
+      <h1 class="title-section">What I like to do:</h1>
       <div class="skills-set">
         <h3 class="topic">UI/UX</h3>
         <ul class="skills-list">
@@ -46,16 +54,15 @@
           <li class="skill-item">NodeJS</li>
           <li class="skill-item">Wordpress</li>
           <li class="skill-item">Woocommerce</li>
-
           <li class="skill-item">Strapi</li>
           <li class="skill-item">MongoDB</li>
           <li class="skill-item">Firebase</li>
         </ul>
       </div>
       <div class="skills-set">
-        <h3 class="topic">{{ $t("daily") }}</h3>
+        <h3 class="topic">Tooling</h3>
         <ul class="skills-list">
-          <li class="skill-item">Terminal</li>
+          <li class="skill-item">iTerm + Oh My Zshel</li>
           <li class="skill-item">Git</li>
           <li class="skill-item">Jest</li>
           <li class="skill-item">Cypress</li>
@@ -67,7 +74,7 @@
         </ul>
       </div>
       <div class="skills-set">
-        <h3 class="topic">{{ $t("inTo") }}</h3>
+        <h3 class="topic">In to</h3>
         <ul class="skills-list">
           <li class="skill-item">Rust</li>
           <li class="skill-item">Elixir</li>

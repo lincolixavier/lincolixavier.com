@@ -13,23 +13,6 @@
       <g-link class="link" :to="`/about/`">about</g-link>
       <g-link class="link" to="/blog/">blog</g-link>
     </nav>
-
-    <div class="languages">
-      <button
-        :class="{ active: currentLocale === 'pt' }"
-        class="toggle-language"
-        @click="localeChanged('pt')"
-      >
-        🇧🇷
-      </button>
-      <button
-        :class="{ active: currentLocale === 'en' }"
-        class="toggle-language"
-        @click="localeChanged('en')"
-      >
-        🇺🇸
-      </button>
-    </div>
   </header>
 </template>
 
@@ -47,20 +30,12 @@ export default {
   data() {
     return {
       showMenu: false,
-      currentLocale: this.$i18n.locale.toString(),
-      availableLocales: this.$i18n.availableLocales,
     };
   },
 
   methods: {
     toggle() {
       this.showMenu = !this.showMenu;
-    },
-    localeChanged(language) {
-      this.currentLocale = language;
-      this.$router.push({
-        path: this.$tp(this.$route.path, this.currentLocale, true),
-      });
     },
   },
 };

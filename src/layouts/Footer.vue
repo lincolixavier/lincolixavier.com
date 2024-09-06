@@ -1,6 +1,6 @@
 <template>
   <section class="contact-me">
-    <h1 class="title-section">{{ $t("letsTalk") }} 🤝🏽</h1>
+    <h1 class="title-section">Get in touch 🤝🏽</h1>
     <div class="contact-socialmedia">
       <a
         target="_blank"
@@ -17,9 +17,10 @@
         href="https://www.linkedin.com/in/lincoli-xavier/"
         class="contact-icon is-linkedin"
       ></a>
+
       <a
         target="_blank"
-        href="https://www.instagram.com/lincolimonteiro/"
+        href="https://www.instagram.com/lincol.xavier/"
         class="contact-icon is-instagram"
       ></a>
       <a
