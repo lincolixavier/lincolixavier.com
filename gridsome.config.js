@@ -21,7 +21,7 @@ module.exports = {
           route: '/blog/:slug',
       }
     },
-    
+
     {
       // Create jobs from markdown files
       use: '@gridsome/source-filesystem',
